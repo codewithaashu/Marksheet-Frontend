@@ -231,7 +231,9 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
                           </div>
                           {course === "Secondary Examination(10th Class)" && (
                             <div>
-                              {opt5OralMarks === 0 ? "-" : opt5OralMarks}
+                              {parseInt(opt5OralMarks) === 0
+                                ? "-"
+                                : opt5OralMarks}
                             </div>
                           )}
                         </div>

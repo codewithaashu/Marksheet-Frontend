@@ -1,7 +1,15 @@
 import React from "react";
-
+import dateFormat from "dateformat";
 const Migration = React.forwardRef(({ data }, ref) => {
   const { name, fatherName, regNo, rollNo, year } = data;
+  const issueDate = () => {
+    const date = new Date(`${year}-06-15`);
+    const day = date.getDay();
+    if (day === 0) {
+      return `${year}-06-16`;
+    }
+    return `${year}-06-15`;
+  };
   return (
     <div ref={ref} className="w-full h-full pt-[60px] px-32">
       <style type="text/css" media="print">
@@ -43,7 +51,7 @@ const Migration = React.forwardRef(({ data }, ref) => {
         </div>
       </div>
       <h1 className="text-[17px] font-extrabold pt-[120px] px-16">
-        15 Jun 2013
+        {dateFormat(issueDate(), "dd mmm yyyy")}
       </h1>
     </div>
   );

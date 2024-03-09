@@ -16,6 +16,14 @@ const Certificate = React.forwardRef(({ data }, ref) => {
     option4,
     option5,
   } = data;
+  const issueDate = () => {
+    const date = new Date(`${year}-06-15`);
+    const day = date.getDay();
+    if (day === 0) {
+      return `${year}-06-16`;
+    }
+    return `${year}-06-15`;
+  };
   return (
     <div ref={ref} className="w-full h-full pt-20 px-[90px]">
       <style type="text/css" media="print">
@@ -111,7 +119,9 @@ const Certificate = React.forwardRef(({ data }, ref) => {
           </div>
         </div>
       </div>
-      <h1 className="text-[17px] font-extrabold pt-52 px-32">15 Jun 2013</h1>
+      <h1 className="text-[17px] font-extrabold pt-52 px-32">
+        {dateFormat(issueDate(), "dd mmm yyyy")}
+      </h1>
     </div>
   );
 });

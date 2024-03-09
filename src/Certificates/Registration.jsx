@@ -1,5 +1,5 @@
 import React from "react";
-
+import dateFormat from "dateformat";
 const Registration = React.forwardRef(({ data }, ref) => {
   const {
     name,
@@ -12,7 +12,16 @@ const Registration = React.forwardRef(({ data }, ref) => {
     option3,
     option4,
     option5,
+    year,
   } = data;
+  const issueDate = () => {
+    const date = new Date(`${year}-06-15`);
+    const day = date.getDay();
+    if (day === 0) {
+      return `${year}-06-16`;
+    }
+    return `${year}-06-15`;
+  };
   return (
     <div ref={ref} className="w-full h-full pt-[60px] px-32">
       <style type="text/css" media="print">
@@ -47,7 +56,9 @@ const Registration = React.forwardRef(({ data }, ref) => {
           </div>
         </div>
       </div>
-      <h1 className="text-[17px] font-extrabold pt-36 px-16">15 Jun 2013</h1>
+      <h1 className="text-[17px] font-extrabold pt-36 px-16">
+        {dateFormat(issueDate(), "dd mmm yyyy")}
+      </h1>
     </div>
   );
 });
