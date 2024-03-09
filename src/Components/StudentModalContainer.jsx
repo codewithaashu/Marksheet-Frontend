@@ -15,11 +15,16 @@ import ErrorToast from "../utility/ErrorToast";
 import WarningToast from "../utility/WarningToast";
 import SuccessToast from "../utility/SuccesToast";
 import CheckEmptyField from "../utility/CheckEmptyField";
+import StreamComponent from "./StreamComponent";
+import streams from "../DB/StreamDB";
 const StudentModalContainer = ({ formData, setFormData, setData }) => {
   const yearInputRef = useRef();
   const dobInputRef = useRef();
   const fileInputRef = useRef();
+  const streamInputRef = useRef();
   const [userType, setUserType] = useState(null);
+  const [stream, setStream] = useState(null);
+  const [streamChange, setStreamChange] = useState(false);
   useEffect(() => {
     yearInputRef.current.value = formData.year;
     dobInputRef.current.value = formData.dob;
@@ -93,6 +98,7 @@ const StudentModalContainer = ({ formData, setFormData, setData }) => {
     if (success) {
       fileInputRef.current.value = "";
       SuccessToast(message ?? "Successfull");
+      window.location.reload();
     } else {
       ErrorToast(message);
     }
@@ -123,7 +129,12 @@ const StudentModalContainer = ({ formData, setFormData, setData }) => {
       <dialog id="my_modal_4" className="modal ">
         <div className="modal-box w-11/12 max-w-5xl">
           <form method="dialog">
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+            <button
+              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              onClick={() => {
+                window.location.reload();
+              }}
+            >
               ✕
             </button>
           </form>
@@ -177,7 +188,6 @@ const StudentModalContainer = ({ formData, setFormData, setData }) => {
               formData={formData}
               setFormData={setFormData}
             />
-
             <SelectComponent
               label="Year"
               data={years}
@@ -187,9 +197,36 @@ const StudentModalContainer = ({ formData, setFormData, setData }) => {
               formData={formData}
               yearInputRef={yearInputRef}
             />
+            {formData.course === "SR. Secondary Examination(12th Class)" && (
+              <>
+                <StreamComponent
+                  label="Stream"
+                  data={streams}
+                  defaultValue="Select Stream"
+                  setStream={setStream}
+                  stream={stream}
+                  field={"stream"}
+                  setFormData={setFormData}
+                  formData={formData}
+                  streamInputRef={streamInputRef}
+                  setStreamChange={setStreamChange}
+                />
+                {streamChange && (
+                  <>
+                    <LanguageComponent
+                      formData={formData}
+                      setFormData={setFormData}
+                      isMarks={true}
+                    />
+                    {seniorSecondary()}
+                  </>
+                )}
+              </>
+            )}
             {userType === "Super Admin" &&
               (formData.course === "SR. Secondary Examination(12th Class)"
-                ? formData?.result && (
+                ? formData?.result &&
+                  !streamChange && (
                     <>
                       <LanguageComponent
                         formData={formData}

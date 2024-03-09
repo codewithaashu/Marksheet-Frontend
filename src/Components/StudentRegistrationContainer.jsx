@@ -23,6 +23,7 @@ import SuccessToast from "../utility/SuccesToast";
 const StudentRegistrationContainer = () => {
   const [course, setCourse] = useState(null);
   const [stream, setStream] = useState(null);
+  const [streamChange, setStreamChange] = useState(false);
   const [formData, setFormData] = useState({
     imgSrc: "",
     name: "",
@@ -238,6 +239,7 @@ const StudentRegistrationContainer = () => {
                   setFormData={setFormData}
                   formData={formData}
                   streamInputRef={streamInputRef}
+                  setStreamChange={setStreamChange}
                 />
                 {stream && (
                   <>

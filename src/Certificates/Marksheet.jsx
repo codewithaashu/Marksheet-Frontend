@@ -73,6 +73,14 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
       return accum + curr;
     }, 0);
   };
+  const issueDate = () => {
+    const date = new Date(`${year}-06-15`);
+    const day = date.getDay();
+    if (day === 0) {
+      return `${year}-06-16`;
+    }
+    return `${year}-06-15`;
+  };
   return (
     <div ref={ref} className="w-full h-full pt-20 px-[90px]">
       <style type="text/css" media="print">
@@ -140,17 +148,17 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
                     Subject
                   </div>
                   <div className="border-2 border-gray-700 flex flex-col gap-2 px-0">
-                    <div>{firstLanguage}</div>
-                    <div>{secondLanguage}</div>
-                    <div>{option1}</div>
-                    <div>{option2}</div>
-                    <div>{option3}</div>
+                    <div>{firstLanguage.slice(0, 20)}</div>
+                    <div>{secondLanguage.slice(0, 20)}</div>
+                    <div>{option1.slice(0, 20)}</div>
+                    <div>{option2.slice(0, 20)}</div>
+                    <div>{option3.slice(0, 20)}</div>
                     <div>
                       {course === "Secondary Examination(10th Class)"
                         ? option4
-                        : `${option4} [Opt]`}
+                        : `${option4.slice(0, 18)} [Opt]`}
                     </div>
-                    {option5 && <div>{option5}</div>}
+                    {option5 && <div>{option5.slice(0, 20)}</div>}
                   </div>
                 </div>
                 <div className="flex flex-col gap-2 flex-1">
@@ -192,15 +200,35 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
                         </div>
                         <div className="border-2 border-gray-700 flex flex-col gap-2">
                           <div>
-                            {lang1OralMarks === 0 ? "-" : lang1OralMarks}
+                            {parseInt(lang1OralMarks) === 0
+                              ? "-"
+                              : lang1OralMarks}
                           </div>
                           <div>
-                            {lang2OralMarks === 0 ? "-" : lang2OralMarks}
+                            {parseInt(lang2OralMarks) === 0
+                              ? "-"
+                              : lang2OralMarks}
                           </div>
-                          <div>{opt1OralMarks === 0 ? "-" : opt1OralMarks}</div>
-                          <div>{opt2OralMarks === 0 ? "-" : opt2OralMarks}</div>
-                          <div>{opt3OralMarks === 0 ? "-" : opt3OralMarks}</div>
-                          <div>{opt4OralMarks === 0 ? "-" : opt4OralMarks}</div>
+                          <div>
+                            {parseInt(opt1OralMarks) === 0
+                              ? "-"
+                              : opt1OralMarks}
+                          </div>
+                          <div>
+                            {parseInt(opt2OralMarks) === 0
+                              ? "-"
+                              : opt2OralMarks}
+                          </div>
+                          <div>
+                            {parseInt(opt3OralMarks) === 0
+                              ? "-"
+                              : opt3OralMarks}
+                          </div>
+                          <div>
+                            {parseInt(opt4OralMarks) === 0
+                              ? "-"
+                              : opt4OralMarks}
+                          </div>
                           {course === "Secondary Examination(10th Class)" && (
                             <div>
                               {opt5OralMarks === 0 ? "-" : opt5OralMarks}
@@ -275,7 +303,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
               <div>WWW.CSSE.CO.IN</div>
             </div>
             <div className="text-[16px] font-extrabold pt-24 px-28">
-              16 Jun 2014
+              {dateFormat(issueDate(), "dd mmm yyyy")}
             </div>
           </div>
         </div>

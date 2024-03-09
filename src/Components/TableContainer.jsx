@@ -155,7 +155,8 @@ const TableContainer = ({ data, cols, field, setData }) => {
     enableDensityToggle: false,
     enableFullScreenToggle: false,
     enableHiding: false,
-    enableEditing: true,
+    enableEditing:
+      localStorage.getItem("userType") === "Super Admin" ? true : false,
     getRowId: (row) => row.id,
     muiTableContainerProps: {
       sx: {
@@ -185,59 +186,64 @@ const TableContainer = ({ data, cols, field, setData }) => {
     renderRowActions: ({ row }) => (
       <Box sx={{ display: "flex", gap: "0.5rem" }}>
         <Tooltip title="Edit">
-          <IconButton onClick={() => handleEditBtn(row.original)}>
+          <IconButton
+            onClick={() => handleEditBtn(row.original)}
+            color="primary"
+          >
             <EditIcon />
           </IconButton>
         </Tooltip>
-        {localStorage.getItem("userType") === "Super Admin" &&
-          field === "student" && (
-            <>
-              <Tooltip title="View Marksheet">
-                <IconButton
-                  onClick={() => handleViewBtn(row.original, "Marksheet")}
-                >
-                  <ViewIcon />
-                </IconButton>
-              </Tooltip>
-              <Tooltip title="View Admit Card">
-                <IconButton
-                  onClick={() => handleViewBtn(row.original, "AdmitCard")}
-                >
-                  <ViewIcon />
-                </IconButton>
-              </Tooltip>
-              <Tooltip title="View Certificate">
-                <IconButton
-                  onClick={() => handleViewBtn(row.original, "Certificate")}
-                >
-                  <ViewIcon />
-                </IconButton>
-              </Tooltip>
-              <Tooltip title="View Migration">
-                <IconButton
-                  onClick={() => handleViewBtn(row.original, "Migration")}
-                >
-                  <ViewIcon />
-                </IconButton>
-              </Tooltip>
-              <Tooltip title="View Registration">
-                <IconButton
-                  onClick={() => handleViewBtn(row.original, "Registration")}
-                >
-                  <ViewIcon />
-                </IconButton>
-              </Tooltip>
-            </>
-          )}
-        {field === "student" || (
-          <Tooltip title="Delete">
-            <IconButton
-              color="error"
-              onClick={() => handleDeleteBtn(row.original)}
-            >
-              <DeleteIcon />
-            </IconButton>
-          </Tooltip>
+        <Tooltip title="Delete">
+          <IconButton
+            color="error"
+            onClick={() => handleDeleteBtn(row.original)}
+          >
+            <DeleteIcon />
+          </IconButton>
+        </Tooltip>
+        {field === "student" && (
+          <>
+            <Tooltip title="View Marksheet">
+              <IconButton
+                onClick={() => handleViewBtn(row.original, "Marksheet")}
+                color="success"
+              >
+                <ViewIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="View Admit Card">
+              <IconButton
+                onClick={() => handleViewBtn(row.original, "AdmitCard")}
+                color="success"
+              >
+                <ViewIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="View Certificate">
+              <IconButton
+                onClick={() => handleViewBtn(row.original, "Certificate")}
+                color="success"
+              >
+                <ViewIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="View Migration">
+              <IconButton
+                onClick={() => handleViewBtn(row.original, "Migration")}
+                color="success"
+              >
+                <ViewIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="View Registration">
+              <IconButton
+                onClick={() => handleViewBtn(row.original, "Registration")}
+                color="success"
+              >
+                <ViewIcon />
+              </IconButton>
+            </Tooltip>
+          </>
         )}
       </Box>
     ),
