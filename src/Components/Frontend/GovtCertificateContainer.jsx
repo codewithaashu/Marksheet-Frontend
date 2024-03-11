@@ -10,52 +10,52 @@ const GovtCertificateContainer = () => {
           </h1>
           <div className="grid grid-cols-5 gap-x-5 items-center justify-center my-3">
             <a
-              href="https://rios.ac.in/images-2/govt/RIOS_CERTIFICATE.jpg"
+              href="https://CSSE.ac.in/images-2/govt/CSSE_CERTIFICATE.jpg"
               target="_blank"
             >
               <img
-                src="https://rios.ac.in/images-2/govt/RIOS_CERTIFICATE.jpg"
+                src="https://CSSE.ac.in/images-2/govt/CSSE_CERTIFICATE.jpg"
                 alt="Certicate"
                 width="125"
                 height="150"
               />
             </a>
             <a
-              href="https://rios.ac.in/images-2/govt/TradeMark.jpg"
+              href="https://CSSE.ac.in/images-2/govt/TradeMark.jpg"
               target="_blank"
             >
               <img
-                src="https://rios.ac.in/images-2/govt/TradeMark.jpg"
+                src="https://CSSE.ac.in/images-2/govt/TradeMark.jpg"
                 alt="Certicate"
                 width="125"
                 height="150"
               />
             </a>
-            <a href="https://rios.ac.in/images-2/govt/TAN.jpg" target="_blank">
+            <a href="https://CSSE.ac.in/images-2/govt/TAN.jpg" target="_blank">
               <img
-                src="https://rios.ac.in/images-2/govt/TAN.jpg"
-                alt="Certicate"
-                width="125"
-                height="150"
-              />
-            </a>
-            <a
-              href="https://rios.ac.in/images-2/govt/PlanningCommission.jpg"
-              target="_blank"
-            >
-              <img
-                src="https://rios.ac.in/images-2/govt/PlanningCommission.jpg"
+                src="https://CSSE.ac.in/images-2/govt/TAN.jpg"
                 alt="Certicate"
                 width="125"
                 height="150"
               />
             </a>
             <a
-              href="https://rios.ac.in/images-2/govt/Trade_Mark.jpg"
+              href="https://CSSE.ac.in/images-2/govt/PlanningCommission.jpg"
               target="_blank"
             >
               <img
-                src="https://rios.ac.in/images-2/govt/Trade_Mark.jpg"
+                src="https://CSSE.ac.in/images-2/govt/PlanningCommission.jpg"
+                alt="Certicate"
+                width="125"
+                height="150"
+              />
+            </a>
+            <a
+              href="https://CSSE.ac.in/images-2/govt/Trade_Mark.jpg"
+              target="_blank"
+            >
+              <img
+                src="https://CSSE.ac.in/images-2/govt/Trade_Mark.jpg"
                 alt="Certicate"
                 width="125"
                 height="150"

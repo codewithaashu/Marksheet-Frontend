@@ -10,7 +10,7 @@ const ChairmanMessageContainer = () => {
           </h1>
           <p className="text-[15px] font-medium">
             {" "}
-            RIOS was intended to be a medium of making education easy for
+            CSSE was intended to be a medium of making education easy for
             students who are unable to attend regular classes. The challenge
             before us was to make the instructional. delivery of curriculum
             convenient and as effective as regular classes for the students. It
@@ -19,13 +19,13 @@ const ChairmanMessageContainer = () => {
             their learning. Reaching out to them through the online medium was
             an excellent way to deliver educational resources and nullify the
             location constraint. The National policy on Education suggested
-            strengthening of RIOS for extending open learning facilities in a
+            strengthening of CSSE for extending open learning facilities in a
             phased manner at secondary and Sr. Secondary levels all over the
             country and abroad as an independent system with its own curriculum
             and examination leading to awarding of certificates. This was
             intended to address the needs of students on working professionals
             in India and abroad to further the cause of spreading education.
-            RIOS offers a viable and convenient approach for education as
+            CSSE offers a viable and convenient approach for education as
             comprehensive study material is delivered online after admission.
             The process of admission is simple too as students only need to
             register online and get admitted with the enrollment number sent
@@ -35,7 +35,7 @@ const ChairmanMessageContainer = () => {
             of pass students are backed by online verification. Spreading the
             cause of making education convenient through the internet was a
             novel initiative suggested by the National Policy on Education and
-            we took this opportunity to start RIOS. The way our instructional
+            we took this opportunity to start CSSE. The way our instructional
             deliver and online facilitation of educational courses have expanded
             in India and abroad, it is a fulfillment of our aspiration to play a
             pivotal role on making education convenient for students all over

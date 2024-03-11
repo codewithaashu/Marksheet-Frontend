@@ -17,7 +17,11 @@ const InputComponent = ({
         <input
           type={inputType}
           value={
-            formData && (isMarks ? formData?.result[field] : formData?.[field])
+            formData.result
+              ? isMarks
+                ? formData?.result[field]
+                : formData?.[field]
+              : formData?.[field]
           }
           className={`file-input ${
             isResult ? "w-full" : "w-full"

@@ -1,12 +1,13 @@
 import React from "react";
 import Icons from "../../DB/Frontend/Icons";
 import { Link } from "react-router-dom";
+import Logo from "../../assests/csseLogo.png";
 const Header = () => {
   return (
     <>
-      <div className="p-5 pb-1 bg-cyan-700 flex flex-col gap-3 sticky top-0 z-10">
+      <div className="p-5 pb-1 bg-cyan-700 flex flex-col gap-3">
         <div className=" flex flex-row justify-around">
-          <img src="https://rios.ac.in/images/logo.png" alt="RIOS" />
+          <img src={Logo} alt="CSSE" className="w-[420px]" />
           <div className=" flex flex-row gap-2">
             {Icons.map((curr, index) => {
               return (
@@ -44,9 +45,6 @@ const Header = () => {
                 </details>
               </li>
               <li>
-                <Link to="/departments">Departments</Link>
-              </li>
-              <li>
                 <details>
                   <summary>Recognition</summary>
                   <ul className="p-2 bg-cyan-700 text-white border-none">
@@ -71,9 +69,6 @@ const Header = () => {
                     <li>
                       <Link to="/intermediate">12th Class(Intermediate)</Link>
                     </li>
-                    <li>
-                      <Link to="/faq">Faqs</Link>
-                    </li>
                   </ul>
                 </details>
               </li>
@@ -86,9 +81,6 @@ const Header = () => {
                   <ul className="p-2 bg-cyan-700 text-white border-none">
                     <li>
                       <Link to="/reservation">Reservation</Link>
-                    </li>
-                    <li>
-                      <Link to="/successStories">Success Stories</Link>
                     </li>
                   </ul>
                 </details>

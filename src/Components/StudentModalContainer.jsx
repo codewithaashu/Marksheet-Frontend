@@ -18,6 +18,8 @@ import CheckEmptyField from "../utility/CheckEmptyField";
 import StreamComponent from "./StreamComponent";
 import streams from "../DB/StreamDB";
 const StudentModalContainer = ({ formData, setFormData, setData }) => {
+  const genderInputRef = useRef();
+  const modeOfResultInputRef = useRef();
   const yearInputRef = useRef();
   const dobInputRef = useRef();
   const fileInputRef = useRef();
@@ -26,8 +28,10 @@ const StudentModalContainer = ({ formData, setFormData, setData }) => {
   const [stream, setStream] = useState(null);
   const [streamChange, setStreamChange] = useState(false);
   useEffect(() => {
+    genderInputRef.current.value = formData.gender;
     yearInputRef.current.value = formData.year;
     dobInputRef.current.value = formData.dob;
+    modeOfResultInputRef.current.value = formData.modeOfResult;
     setUserType(localStorage.getItem("userType"));
   }, [formData]);
   const seniorSecondary = () => {
@@ -86,9 +90,11 @@ const StudentModalContainer = ({ formData, setFormData, setData }) => {
       imgSrc: formData.imgSrc,
       name: formData.name,
       dob: formData.dob,
+      gender: formData.gender,
       fatherName: formData.fatherName,
       motherName: formData.motherName,
       year: formData.year,
+      modeOfResult: formData.modeOfResult,
     });
     if (!isAllFieldFilled) {
       WarningToast(`${emptyField} is required field.`);
@@ -140,6 +146,30 @@ const StudentModalContainer = ({ formData, setFormData, setData }) => {
           </form>
           <div className=" bg-white p-5 md:p-7 rounded-md flex flex-col gap-4  shadow-md mb-3 mt-7 ">
             <div className="flex flex-col gap-1 ">
+              <h1 className="text-base font-medium text-gray-500">
+                Mode of Result
+              </h1>
+              <select
+                className="select  w-full  h-fit p-2 bg-white text-base border-[1px] border-gray-400 outline-none rounded-sm text-gray-700 focus:outline-none"
+                defaultValue=""
+                onChange={(e) =>
+                  setFormData({ ...formData, modeOfResult: e.target.value })
+                }
+                ref={modeOfResultInputRef}
+              >
+                <option disabled value={""}>
+                  Select Mode of Result
+                </option>
+                {["Online", "Offline"].map((curr, index) => {
+                  return (
+                    <option value={curr} key={index}>
+                      {curr}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+            <div className="flex flex-col gap-1 ">
               <h1 className="text-[15px] font-medium text-gray-600">
                 Student Photo
               </h1>
@@ -172,6 +202,28 @@ const StudentModalContainer = ({ formData, setFormData, setData }) => {
                 ref={dobInputRef}
               />
             </div>
+            <div className="flex flex-col gap-1 ">
+              <h1 className="text-base font-medium text-gray-500">Gender</h1>
+              <select
+                className="select  w-full  h-fit p-2 bg-white text-base border-[1px] border-gray-400 outline-none rounded-sm text-gray-700 focus:outline-none"
+                defaultValue=""
+                onChange={(e) =>
+                  setFormData({ ...formData, gender: e.target.value })
+                }
+                ref={genderInputRef}
+              >
+                <option disabled value={""}>
+                  Select Gender
+                </option>
+                {["Male", "Female"].map((curr, index) => {
+                  return (
+                    <option value={curr} key={index}>
+                      {curr}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
             <InputComponent
               label="Father Name"
               inputType="text"
@@ -188,6 +240,7 @@ const StudentModalContainer = ({ formData, setFormData, setData }) => {
               formData={formData}
               setFormData={setFormData}
             />
+
             <SelectComponent
               label="Year"
               data={years}

@@ -15,6 +15,7 @@ const AdmitCard = React.forwardRef(({ data }, ref) => {
     option3,
     option4,
     option5,
+    gender,
   } = data;
   return (
     <div ref={ref} className="w-full h-full pt-[66px] px-[90px]">
@@ -63,7 +64,7 @@ const AdmitCard = React.forwardRef(({ data }, ref) => {
                 {dateFormat(dob, "dd mmm yyyy")}
               </h1>
               <h1 className="text-lg font-semibold font-[roboto-medium] uppercase">
-                Male
+                {gender}
               </h1>
               <h1 className="text-lg font-semibold font-[roboto-medium] uppercase">
                 {fatherName}

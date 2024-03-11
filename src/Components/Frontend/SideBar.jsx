@@ -28,23 +28,24 @@ const SideBar = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                {index === 3 ? (
+                {index === 0 ? (
                   <Link to="/hallTicket" className="text-[13px] font-medium ">
                     {curr}{" "}
+                    <div className="badge bg-red-600 text-white text-sm font-medium">
+                      New
+                    </div>
                   </Link>
                 ) : (
-                  <a
+                  <Link
                     className="text-[13px] font-medium "
-                    target="_blank"
-                    href="https://rios.ac.in/dw/RCAPPLICATIONFORM.pdf"
+                    to={
+                      index === 5
+                        ? "/verify"
+                        : "https://rios.ac.in/dw/RCAPPLICATIONFORM.pdf"
+                    }
                   >
-                    {curr}{" "}
-                    {index < 3 && (
-                      <div className="badge bg-red-600 text-white text-sm font-medium">
-                        New
-                      </div>
-                    )}
-                  </a>
+                    {curr}
+                  </Link>
                 )}
               </div>
             );

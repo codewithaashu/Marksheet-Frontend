@@ -19,19 +19,17 @@ import Welcome from "./Pages/Frontend/Welcome";
 import ChairmanMessage from "./Pages/Frontend/ChairmanMessage";
 import AimsObjective from "./Pages/Frontend/AimsObjective";
 import WorkPlan from "./Pages/Frontend/WorkPlan";
-import Department from "./Pages/Frontend/Department";
 import Examination from "./Pages/Frontend/Examination";
 import Reservation from "./Pages/Frontend/Reservation";
-import SuccessStories from "./Pages/Frontend/SuccessStories";
 import Media from "./Pages/Frontend/Media";
 import HighSchool from "./Pages/Frontend/HighSchool";
 import Intermediate from "./Pages/Frontend/Intermediate";
-import Faq from "./Pages/Frontend/Faq";
 import ContactUs from "./Pages/Frontend/ContactUs";
 import GovtCertificate from "./Pages/Frontend/GovtCertificate";
 import NotificationLetters from "./Pages/Frontend/NotificationLetters";
 import HallTicket from "./Pages/Frontend/HallTicket";
 import Result from "./Pages/Frontend/Result";
+import VerifyRegistration from "./Pages/Frontend/VerifyRegistration";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const userType = localStorage.getItem("userType");
 const router = createBrowserRouter([
@@ -60,20 +58,12 @@ const router = createBrowserRouter([
     element: <WorkPlan />,
   },
   {
-    path: "/departments",
-    element: <Department />,
-  },
-  {
     path: "/examination",
     element: <Examination />,
   },
   {
     path: "/reservation",
     element: <Reservation />,
-  },
-  {
-    path: "/successStories",
-    element: <SuccessStories />,
   },
   {
     path: "/media",
@@ -86,10 +76,6 @@ const router = createBrowserRouter([
   {
     path: "/intermediate",
     element: <Intermediate />,
-  },
-  {
-    path: "/faq",
-    element: <Faq />,
   },
   {
     path: "/contactus",
@@ -110,6 +96,10 @@ const router = createBrowserRouter([
   {
     path: "/result",
     element: <Result />,
+  },
+  {
+    path: "/verify",
+    element: <VerifyRegistration />,
   },
   {
     path: "/admin",

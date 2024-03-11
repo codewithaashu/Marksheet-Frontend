@@ -26,7 +26,7 @@ const AimsObjectiveContainer = () => {
           organization has been carrying out some research work also over the
           last 3-4 years. With the aim and objective of enhancing and
           accelerating the enrolment/ retention at secondary and senior/
-          secondary level, Rural Institute of Open Schooling (RIOS) was
+          secondary level, Rural Institute of Open Schooling (CSSE) was
           conceived and has been set up as an autonomous registered body under
           the Societies Registration Act, with its registered office at Delhi
           with the following objectives: To provide secondary and senior

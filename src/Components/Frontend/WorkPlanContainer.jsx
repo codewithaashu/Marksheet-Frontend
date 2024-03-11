@@ -21,9 +21,9 @@ const WorkPlanContainer = () => {
               Resolution to the problem
             </h1>
             To provide secondary education to every citizen of the country and
-            make job-oriented, the Rural Institute of Open Schooling (RIOS) has
-            come out with an ambitious proposal at national level, which is as
-            follows:
+            make job-oriented, The Council for Secondary and Senior Secondary
+            Education (CSSE) has come out with an ambitious proposal at national
+            level, which is as follows:
             <div className="flex flex-row justify-center py-2">
               <div className="flex flex-row w-3/4 justify-between">
                 <div className="flex flex-col gap-1">
@@ -71,9 +71,9 @@ const WorkPlanContainer = () => {
             are not able to get secondary and senior secondary education in the
             normal course of life.
             <h1 className="text-[17px] font-semibold text-amber-700 py-2">
-              Status of RIOS
+              Status of CSSE
             </h1>
-            RIOS is a registered society under Societies Registration Act
+            CSSE is a registered society under Societies Registration Act
             No.XXI, 1860 Govt. of NCT of Delhi to work in school education
             sector at national level in accordance with the specified rules and
             regulations.
@@ -82,7 +82,7 @@ const WorkPlanContainer = () => {
             </h1>
             The Examination Wing of the Council would verify and certify the
             genuineness of the certificates issued by the Council. For this
-            purpose, it has already been resolved by the RIOS to submit an
+            purpose, it has already been resolved by the CSSE to submit an
             application to the Council of Boards of School Education in India
             (COBSE) seeking their membership.
             <h1 className="text-[17px] font-semibold text-amber-700 py-2">
@@ -92,12 +92,12 @@ const WorkPlanContainer = () => {
             for grant of `equivalence of the curriculum developed by the Council
             in line with the NCF 2005 of the NCERT. It is also proposed to
             develop vocational education and training/technical curriculum by
-            RIOS.
+            CSSE.
             <h1 className="text-[17px] font-semibold text-amber-700 py-2">
               Admission and registration
             </h1>
             Students from different parts of the country can seek admission to
-            various courses conducted by the RIOS without any caste, creed or
+            various courses conducted by the CSSE without any caste, creed or
             social barriers.
             <h1 className="text-[17px] font-semibold text-amber-700 py-2">
               Setting up of Academic centres
@@ -109,7 +109,7 @@ const WorkPlanContainer = () => {
             <h1 className="text-[17px] font-semibold text-amber-700 py-2">
               Scheme of Examinations
             </h1>
-            The RIOS proposes to conduct secondary and senior secondary
+            The CSSE proposes to conduct secondary and senior secondary
             examination twice a year. In addition, it is also proposed to offer
             offline, online on-demand examination in case the number of students
             at any centre is 50 or more.
@@ -119,7 +119,7 @@ const WorkPlanContainer = () => {
             Immediately on completion of board examination but not exceeding one
             month, results would be declared and certificates/ mark-sheets would
             be issued through the Academic Centres. The following certificates
-            would be issued by the RIOS:
+            would be issued by the CSSE:
             <ul className="list-disc px-10 flex flex-col gap-1 py-1">
               <li>Mark-sheet and examination certificate</li>
               <li>Character certificate</li>

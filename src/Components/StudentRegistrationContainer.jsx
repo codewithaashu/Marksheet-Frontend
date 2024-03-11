@@ -25,11 +25,13 @@ const StudentRegistrationContainer = () => {
   const [stream, setStream] = useState(null);
   const [streamChange, setStreamChange] = useState(false);
   const [formData, setFormData] = useState({
+    modeOfResult: "",
     imgSrc: "",
     name: "",
     dob: "",
     fatherName: "",
     motherName: "",
+    gender: "",
     year: "",
     course: "",
     stream: "",
@@ -44,6 +46,7 @@ const StudentRegistrationContainer = () => {
   });
   const fileInputRef = useRef();
   const yearInputRef = useRef();
+  const genderInputRef = useRef();
   const courseInputRef = useRef();
   const streamInputRef = useRef();
   const seniorSecondary = () => {
@@ -106,11 +109,13 @@ const StudentRegistrationContainer = () => {
     if (success) {
       SuccessToast(message ?? "Successfull");
       setFormData({
+        modeOfResult: "",
         imgSrc: "",
         name: "",
         dob: "",
         fatherName: "",
         motherName: "",
+        gender: "",
         year: "",
         course: "",
         stream: "",
@@ -125,6 +130,7 @@ const StudentRegistrationContainer = () => {
       fileInputRef.current.value = "";
       yearInputRef.current.value = "";
       courseInputRef.current.value = "";
+      genderInputRef.current.value = "";
       if (course === "SR. Secondary Examination(12th Class)") {
         streamInputRef.current.value = "";
       }
@@ -188,6 +194,28 @@ const StudentRegistrationContainer = () => {
             setFormData={setFormData}
             isMarks={false}
           />
+          <div className="flex flex-col gap-1 ">
+            <h1 className="text-base font-medium text-gray-500">Gender</h1>
+            <select
+              className="select  w-full  h-fit p-2 bg-white text-base border-[1px] border-gray-400 outline-none rounded-sm text-gray-700 focus:outline-none"
+              defaultValue=""
+              onChange={(e) =>
+                setFormData({ ...formData, gender: e.target.value })
+              }
+              ref={genderInputRef}
+            >
+              <option disabled value={""}>
+                Select Gender
+              </option>
+              {["Male", "Female"].map((curr, index) => {
+                return (
+                  <option value={curr} key={index}>
+                    {curr}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
           <InputComponent
             label="Father Name"
             inputType="text"
@@ -206,6 +234,7 @@ const StudentRegistrationContainer = () => {
             setFormData={setFormData}
             isMarks={false}
           />
+
           <SelectComponent
             label="Year"
             data={years}

@@ -12,7 +12,7 @@ const ReservationContainer = () => {
             Reservation will be given as per the appropriate Government Policy.
             The Student should submit the testimonials along with their
             application forms to avail reservations under various course of
-            RIOS.
+            CSSE.
             <h1 className="text-[17px] font-semibold text-amber-700 pb-2">
               Reservations under the Constitution: Right to equality
             </h1>

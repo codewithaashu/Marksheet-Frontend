@@ -38,6 +38,11 @@ const HomeContainer = ({ course }) => {
             header: "Reg. Date",
             size: 150,
           },
+          {
+            accessorKey: "printingStatus",
+            header: "Status",
+            size: 150,
+          },
         ]
       : [
           {

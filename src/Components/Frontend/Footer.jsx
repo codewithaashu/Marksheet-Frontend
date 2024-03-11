@@ -13,12 +13,6 @@ const Footer = () => {
             Home
           </Link>
           <Link
-            to="/departments"
-            className="text-[13px] font-medium px-2 border-r-[1px] border-gray-600"
-          >
-            Departments
-          </Link>
-          <Link
             to="/examination"
             className="text-[13px] font-medium px-2 border-r-[1px] border-gray-600"
           >
@@ -29,7 +23,8 @@ const Footer = () => {
           </Link>
         </div>
         <div className="text-sm font-medium">
-          Copyright ? Rural Institute of Open Schooling. All Rights Reserved.
+          Copyright &#169; Council for Secondary and Senior Secondary Education.
+          All Rights Reserved.
         </div>
       </div>
     </>

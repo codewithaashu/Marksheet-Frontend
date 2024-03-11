@@ -12,7 +12,7 @@ const ExaminationContainer = () => {
             <h1 className="text-[17px] font-semibold text-amber-700 pb-2">
               Features of the Scheme of On-Demand Exam
             </h1>
-            Registration Branch of the RIOS has done the registration of the
+            Registration Branch of the CSSE has done the registration of the
             students at class X and XII and issue Registration Number. All type
             of corrections of the Registration certificate is dealt with by this
             branch.
@@ -60,7 +60,7 @@ const ExaminationContainer = () => {
             <h1 className="text-[17px] font-semibold text-amber-700 py-2">
               Eligibility to Appear in On-Demand Exam
             </h1>
-            Already registered student of RIOS for a programmer being offered by
+            Already registered student of CSSE for a programmer being offered by
             the Board, has the option to appear in the On-Demand Exam provided
             the student has completed the minimum eligibility time and has valid
             registration period. The eligible students can appear in the
@@ -73,10 +73,10 @@ const ExaminationContainer = () => {
               Process of Registration for On-Demand Exam
             </h1>
             The registration for the On-Demand Exam can be done only online
-            through RIOS website. If an exam fee is paid by Credit Card, the
+            through CSSE website. If an exam fee is paid by Credit Card, the
             Hall Ticket is generated instantaneously and the student can take
             its printout. Registration fee can also be paid through bank draft
-            in favour of RIOS. In that case an acknowledgement receipt is
+            in favour of CSSE. In that case an acknowledgement receipt is
             generated immediately and the student is required to submit the
             original bank draft along with a copy of the acknowledgement receipt
             at the concerned Regional Centre. After receiving the bank draft at

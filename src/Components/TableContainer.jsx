@@ -53,6 +53,53 @@ const TableContainer = ({ data, cols, field, setData }) => {
       setFormData(row);
     }
   };
+
+  const handleAfterPrintDocument = (id) => {
+    confirmAlert({
+      customUI: ({ onClose }) => {
+        return (
+          <div className=" py-3 bg-blue text-white rounded-md shadow-md flex flex-col w-[360px]">
+            <h1 className="text-xl font-semibold pb-2 border-b-[1px] border-gray-50 px-3">
+              Printing Confirmation
+            </h1>
+            <div className="py-3 flex flex-col gap-10 px-10">
+              <p>Did you print this document?</p>
+              <div className="flex flex-row gap-5 self-end">
+                <button
+                  className="bg-white text-black px-5 py-2 rounded-sm"
+                  onClick={onClose}
+                >
+                  No
+                </button>
+                <button
+                  className="bg-red-500 text-white px-5 py-2 rounded-sm"
+                  onClick={async () => {
+                    try {
+                      const { data } = await axios.patch(
+                        `${process.env.REACT_APP_SERVER_BASE_URL}/api/student/${id}`
+                      );
+                      setData(data.data);
+                      if (data.success) {
+                        SuccessToast(data.message);
+                        window.location.reload();
+                      } else {
+                        ErrorToast(data.message);
+                      }
+                      onClose();
+                    } catch (err) {
+                      ErrorToast("Server Error");
+                    }
+                  }}
+                >
+                  Yes
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      },
+    });
+  };
   const handleDeleteBtn = async ({ _id }) => {
     try {
       confirmAlert({
@@ -113,7 +160,9 @@ const TableContainer = ({ data, cols, field, setData }) => {
       }
       return registrationRef.current;
     },
-    onAfterPrint: () => window.location.reload(),
+    onAfterPrint: () => {
+      handleAfterPrintDocument(printData._id);
+    },
   });
 
   const handleViewBtn = (arg, documentName) => {
