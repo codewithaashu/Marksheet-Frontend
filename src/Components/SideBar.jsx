@@ -5,7 +5,7 @@ const SideBar = ({ pathname }) => {
   const naviagte = useNavigate();
   const [userType, setUserType] = useState(null);
   const handleLogout = () => {
-    naviagte("/");
+    naviagte("/admin");
     localStorage.clear();
   };
   useEffect(() => {
@@ -37,7 +37,9 @@ const SideBar = ({ pathname }) => {
               <>
                 <li
                   className={`flex flex-row gap-2 text-lg font-medium items-center   cursor-pointer ${
-                    pathname === "/admins" ? "text-white" : "text-base-300"
+                    pathname === "/admin/admins"
+                      ? "text-white"
+                      : "text-base-300"
                   } `}
                 >
                   <svg
@@ -54,11 +56,13 @@ const SideBar = ({ pathname }) => {
                       d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
                     />
                   </svg>
-                  <Link to="/admins">Admins</Link>
+                  <Link to="/admin/admins">Admins</Link>
                 </li>
                 <li
                   className={`flex flex-row gap-2 text-lg font-medium items-center   cursor-pointer ${
-                    pathname === "/createAdmin" ? "text-white" : "text-base-300"
+                    pathname === "/admin/createAdmin"
+                      ? "text-white"
+                      : "text-base-300"
                   } `}
                 >
                   <svg
@@ -75,7 +79,7 @@ const SideBar = ({ pathname }) => {
                       d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
                     />
                   </svg>
-                  <Link to="/createAdmin">Create Admin</Link>
+                  <Link to="/admin/createAdmin">Create Admin</Link>
                 </li>
               </>
             )}
@@ -103,7 +107,7 @@ const SideBar = ({ pathname }) => {
               <ul className="flex flex-col gap-3 px-4">
                 <li
                   className={`flex flex-row gap-2 text-lg font-medium items-center   cursor-pointer ${
-                    pathname === "/users/10th%20Class"
+                    pathname === "/admin/users/10th%20Class"
                       ? "text-white"
                       : "text-base-300"
                   } `}
@@ -124,7 +128,7 @@ const SideBar = ({ pathname }) => {
                   </svg>
 
                   <Link
-                    to="/users/10th Class"
+                    to="/admin/users/10th Class"
                     className="text-base font-medium"
                   >
                     10th Class
@@ -132,7 +136,7 @@ const SideBar = ({ pathname }) => {
                 </li>
                 <li
                   className={`flex flex-row gap-2 text-lg font-medium items-center   cursor-pointer ${
-                    pathname === "/users/12th%20Class"
+                    pathname === "/admin/users/12th%20Class"
                       ? "text-white"
                       : "text-base-300"
                   } `}
@@ -153,7 +157,7 @@ const SideBar = ({ pathname }) => {
                   </svg>
 
                   <Link
-                    to="/users/12th Class"
+                    to="/admin/users/12th Class"
                     className="text-base font-medium"
                   >
                     12th Class
@@ -164,7 +168,7 @@ const SideBar = ({ pathname }) => {
             {userType === "Admin" && (
               <li
                 className={`flex flex-row gap-2 text-lg font-medium items-center   cursor-pointer ${
-                  pathname === "/studentRegistration"
+                  pathname === "/admin/studentRegistration"
                     ? "text-white"
                     : "text-base-300"
                 }`}
@@ -183,12 +187,16 @@ const SideBar = ({ pathname }) => {
                     d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
                   />
                 </svg>
-                <Link to="/studentRegistration">Student Registration</Link>
+                <Link to="/admin/studentRegistration">
+                  Student Registration
+                </Link>
               </li>
             )}
             <li
               className={`flex flex-row gap-2 text-lg font-medium items-center   cursor-pointer ${
-                pathname === "/changePassword" ? "text-white" : "text-base-300"
+                pathname === "/admin/changePassword"
+                  ? "text-white"
+                  : "text-base-300"
               }`}
             >
               <svg
@@ -211,7 +219,7 @@ const SideBar = ({ pathname }) => {
                 />
               </svg>
 
-              <Link to="/changePassword">Change Password</Link>
+              <Link to="/admin/changePassword">Change Password</Link>
             </li>
             <li className="flex flex-row gap-2 text-lg font-medium items-center text-white cursor-pointer absolute bottom-4">
               <svg

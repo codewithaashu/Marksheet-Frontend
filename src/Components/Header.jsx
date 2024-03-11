@@ -1,14 +1,9 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = ({ sideBar, setSideBar }) => {
-  const navigate = useNavigate();
   const username = localStorage.getItem("username");
   const userType = localStorage.getItem("userType");
-  const handleLogout = () => {
-    navigate("/");
-    localStorage.clear();
-  };
   return (
     <div className="navbar bg-white shadow-md sticky top-0 z-50">
       <div className="navbar-start">

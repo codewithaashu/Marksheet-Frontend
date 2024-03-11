@@ -13,39 +13,134 @@ import CreateAdmin from "./Pages/CreateAdmin";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import PrintDocument from "./Pages/PrintDocument";
+import Home from "./Pages/Frontend/Home";
+import History from "./Pages/Frontend/History";
+import Welcome from "./Pages/Frontend/Welcome";
+import ChairmanMessage from "./Pages/Frontend/ChairmanMessage";
+import AimsObjective from "./Pages/Frontend/AimsObjective";
+import WorkPlan from "./Pages/Frontend/WorkPlan";
+import Department from "./Pages/Frontend/Department";
+import Examination from "./Pages/Frontend/Examination";
+import Reservation from "./Pages/Frontend/Reservation";
+import SuccessStories from "./Pages/Frontend/SuccessStories";
+import Media from "./Pages/Frontend/Media";
+import HighSchool from "./Pages/Frontend/HighSchool";
+import Intermediate from "./Pages/Frontend/Intermediate";
+import Faq from "./Pages/Frontend/Faq";
+import ContactUs from "./Pages/Frontend/ContactUs";
+import GovtCertificate from "./Pages/Frontend/GovtCertificate";
+import NotificationLetters from "./Pages/Frontend/NotificationLetters";
+import HallTicket from "./Pages/Frontend/HallTicket";
+import Result from "./Pages/Frontend/Result";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const userType = localStorage.getItem("userType");
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/history",
+    element: <History />,
+  },
+  {
+    path: "/welcome",
+    element: <Welcome />,
+  },
+  {
+    path: "/chairmanMessage",
+    element: <ChairmanMessage />,
+  },
+  {
+    path: "/aims&Objective",
+    element: <AimsObjective />,
+  },
+  {
+    path: "/workplan",
+    element: <WorkPlan />,
+  },
+  {
+    path: "/departments",
+    element: <Department />,
+  },
+  {
+    path: "/examination",
+    element: <Examination />,
+  },
+  {
+    path: "/reservation",
+    element: <Reservation />,
+  },
+  {
+    path: "/successStories",
+    element: <SuccessStories />,
+  },
+  {
+    path: "/media",
+    element: <Media />,
+  },
+  {
+    path: "/highSchool",
+    element: <HighSchool />,
+  },
+  {
+    path: "/intermediate",
+    element: <Intermediate />,
+  },
+  {
+    path: "/faq",
+    element: <Faq />,
+  },
+  {
+    path: "/contactus",
+    element: <ContactUs />,
+  },
+  {
+    path: "/govtCertificate",
+    element: <GovtCertificate />,
+  },
+  {
+    path: "/notification-letters",
+    element: <NotificationLetters />,
+  },
+  {
+    path: "/hallTicket",
+    element: <HallTicket />,
+  },
+  {
+    path: "/result",
+    element: <Result />,
+  },
+  {
+    path: "/admin",
     element: <App />,
   },
   {
-    path: "/users/:id",
+    path: "/admin/users/:id",
     element: userType ? <StudentsList /> : <App />,
   },
   {
-    path: "/admins",
+    path: "/admin/admins",
     element: userType ? <Admins /> : <App />,
   },
   {
-    path: "/createAdmin",
+    path: "/admin/createAdmin",
     element: userType ? <CreateAdmin /> : <App />,
   },
   {
-    path: "/studentRegistration",
+    path: "/admin/studentRegistration",
     element: userType ? <StudentRegistration /> : <App />,
   },
   {
-    path: "/results",
+    path: "/admin/results",
     element: userType ? <Results /> : <App />,
   },
   {
-    path: "/printDocuments",
+    path: "/admin/printDocuments",
     element: userType ? <PrintDocument /> : <App />,
   },
   {
-    path: "/changePassword",
+    path: "/admin/changePassword",
     element: userType ? <ChangePassword /> : <App />,
   },
 ]);
