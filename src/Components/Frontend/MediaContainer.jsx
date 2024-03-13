@@ -9,12 +9,12 @@ const MediaContainer = () => {
             Media
           </h1>
           <div className="grid grid-cols-5 justify-between gap-y-5 gap-x-3">
-            <img src="https://CSSE.ac.in/images-2/media/13.jpg" alt="Media1" />
-            <img src="https://CSSE.ac.in/images-2/media/14.jpg" alt="Media2" />
-            <img src="https://CSSE.ac.in/images-2/media/14.jpg" alt="Media3" />
-            <img src="https://CSSE.ac.in/images-2/media/15L.jpg" alt="Media4" />
-            <img src="https://CSSE.ac.in/images-2/media/17.jpg" alt="Media5" />
-            <img src="https://CSSE.ac.in/images-2/media/18.jpg" alt="Media6" />
+            <img src="https://rios.ac.in/images-2/media/13.jpg" alt="Media1" />
+            <img src="https://rios.ac.in/images-2/media/14.jpg" alt="Media2" />
+            <img src="https://rios.ac.in/images-2/media/14.jpg" alt="Media3" />
+            <img src="https://rios.ac.in/images-2/media/15L.jpg" alt="Media4" />
+            <img src="https://rios.ac.in/images-2/media/17.jpg" alt="Media5" />
+            <img src="https://rios.ac.in/images-2/media/18.jpg" alt="Media6" />
           </div>
         </div>
       </div>
