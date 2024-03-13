@@ -67,7 +67,10 @@ const TableContainer = ({ data, cols, field, setData }) => {
               <div className="flex flex-row gap-5 self-end">
                 <button
                   className="bg-white text-black px-5 py-2 rounded-sm"
-                  onClick={onClose}
+                  onClick={() => {
+                    onClose();
+                    window.location.reload();
+                  }}
                 >
                   No
                 </button>
