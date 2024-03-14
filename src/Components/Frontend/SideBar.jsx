@@ -1,8 +1,25 @@
 import React from "react";
 import GuideLines from "../../DB/Frontend/Guidelines";
 import { Link } from "react-router-dom";
-
-const SideBar = () => {
+import MigrationForm from "../../assests/Duplication Migration Form.pdf";
+import HighSchoolSyllabus from "../../assests/Syllabus 10th- 10thSyllabus - CSSE.pdf";
+import IntermediateSyllabus from "../../assests/Syllabus for High School & Intermediate Examination - CSSE.pdf";
+import DuplicationMigrationForm from "../../assests/Duplication Migration Form.pdf";
+import AdmissionForm from "../../assests/CSSE NEW APPLICATION FORM.pdf";
+const SideBar = (index) => {
+  const linkFiles = () => {
+    if (index == 0) {
+      return (
+        <a href={MigrationForm} target="_blank">
+          Migraion Form
+        </a>
+      );
+    } else if (index == 1) {
+    } else if (index == 2) {
+    } else if (index == 3) {
+    } else if (index == 4) {
+    }
+  };
   return (
     <>
       <div className="bg-base-200 h-fit">
@@ -35,17 +52,42 @@ const SideBar = () => {
                       New
                     </div>
                   </Link>
-                ) : (
-                  <Link
-                    className="text-[13px] font-medium "
-                    to={
-                      index === 5
-                        ? "/verify"
-                        : "https://rios.ac.in/dw/RCAPPLICATIONFORM.pdf"
-                    }
-                  >
+                ) : index === 5 ? (
+                  <Link className="text-[13px] font-medium " to="/verify">
                     {curr}
                   </Link>
+                ) : index === 1 ? (
+                  <a
+                    href={AdmissionForm}
+                    target="_blank"
+                    className="text-[13px] font-medium "
+                  >
+                    {curr}
+                  </a>
+                ) : index === 2 ? (
+                  <a
+                    href={HighSchoolSyllabus}
+                    target="_blank"
+                    className="text-[13px] font-medium "
+                  >
+                    {curr}
+                  </a>
+                ) : index == 3 ? (
+                  <a
+                    href={IntermediateSyllabus}
+                    target="_blank"
+                    className="text-[13px] font-medium "
+                  >
+                    {curr}
+                  </a>
+                ) : (
+                  <a
+                    href={DuplicationMigrationForm}
+                    target="_blank"
+                    className="text-[13px] font-medium "
+                  >
+                    {curr}
+                  </a>
                 )}
               </div>
             );
