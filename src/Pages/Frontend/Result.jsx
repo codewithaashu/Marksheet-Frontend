@@ -19,6 +19,7 @@ const Result = () => {
     content: () => componentRef.current,
     onAfterPrint: () => {
       setFormData({ regNo: "", dob: "" });
+      window.location.reload();
     },
   });
   const fetchResult = async () => {
