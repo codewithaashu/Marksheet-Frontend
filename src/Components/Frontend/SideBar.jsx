@@ -1,25 +1,11 @@
 import React from "react";
 import GuideLines from "../../DB/Frontend/Guidelines";
 import { Link } from "react-router-dom";
-import MigrationForm from "../../assests/Duplication Migration Form.pdf";
 import HighSchoolSyllabus from "../../assests/Syllabus 10th- 10thSyllabus - CSSE.pdf";
 import IntermediateSyllabus from "../../assests/Syllabus for High School & Intermediate Examination - CSSE.pdf";
 import DuplicationMigrationForm from "../../assests/Duplication Migration Form.pdf";
 import AdmissionForm from "../../assests/CSSE NEW APPLICATION FORM.pdf";
 const SideBar = (index) => {
-  const linkFiles = () => {
-    if (index == 0) {
-      return (
-        <a href={MigrationForm} target="_blank">
-          Migraion Form
-        </a>
-      );
-    } else if (index == 1) {
-    } else if (index == 2) {
-    } else if (index == 3) {
-    } else if (index == 4) {
-    }
-  };
   return (
     <>
       <div className="bg-base-200 h-fit">
@@ -60,6 +46,7 @@ const SideBar = (index) => {
                   <a
                     href={AdmissionForm}
                     target="_blank"
+                    rel="noreferrer"
                     className="text-[13px] font-medium "
                   >
                     {curr}
@@ -68,14 +55,16 @@ const SideBar = (index) => {
                   <a
                     href={HighSchoolSyllabus}
                     target="_blank"
+                    rel="noreferrer"
                     className="text-[13px] font-medium "
                   >
                     {curr}
                   </a>
-                ) : index == 3 ? (
+                ) : index === 3 ? (
                   <a
                     href={IntermediateSyllabus}
                     target="_blank"
+                    rel="noreferrer"
                     className="text-[13px] font-medium "
                   >
                     {curr}
@@ -84,6 +73,7 @@ const SideBar = (index) => {
                   <a
                     href={DuplicationMigrationForm}
                     target="_blank"
+                    rel="noreferrer"
                     className="text-[13px] font-medium "
                   >
                     {curr}

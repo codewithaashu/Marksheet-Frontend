@@ -5,7 +5,7 @@ import Logo from "../../assests/csseLogo.png";
 const Header = () => {
   return (
     <>
-      <div className="p-5 pb-1 bg-cyan-700 flex flex-col gap-3">
+      <div className="p-5 pb-1 bg-white  flex flex-col gap-3">
         <div className=" flex flex-row justify-around">
           <img src={Logo} alt="CSSE" className="w-[420px]" />
           <div className=" flex flex-row gap-2">
@@ -16,7 +16,7 @@ const Header = () => {
             })}
           </div>
         </div>
-        <div className="navbar  flex flex-row justify-center  text-white min-h-fit">
+        <div className="navbar  flex flex-row justify-center  text-black min-h-fit">
           <div className="navbar-center hidden lg:flex p-0">
             <ul className="menu menu-horizontal px-1 p-0 text-sm font-semibold">
               <li>
@@ -25,7 +25,7 @@ const Header = () => {
               <li>
                 <details>
                   <summary>About Us</summary>
-                  <ul className="p-2 bg-cyan-700 text-white border-none">
+                  <ul className="p-2 bg-white text-black border-none">
                     <li>
                       <Link to="/history">History</Link>
                     </li>
@@ -50,7 +50,7 @@ const Header = () => {
               <li>
                 <details>
                   <summary>Programme</summary>
-                  <ul className="p-2 bg-cyan-700 text-white border-none">
+                  <ul className="p-2 bg-white text-black border-none">
                     <li>
                       <Link to="/highSchool">10th Class(High School)</Link>
                     </li>
@@ -66,7 +66,7 @@ const Header = () => {
               <li>
                 <details>
                   <summary>Informations</summary>
-                  <ul className="p-2 bg-cyan-700 text-white border-none">
+                  <ul className="p-2 bg-white text-black border-none">
                     <li>
                       <Link to="/reservation">Reservation</Link>
                     </li>

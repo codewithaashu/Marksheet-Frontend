@@ -42,15 +42,9 @@ const TableContainer = ({ data, cols, field, setData }) => {
     option4: "",
     option5: "",
   });
-  const [rowData, setRowData] = useState(null);
   const handleEditBtn = (row) => {
     document.getElementById("my_modal_4").showModal();
-    if (field === "result") {
-      setFormData(row.result);
-      setRowData(row);
-    } else {
-      setFormData(row);
-    }
+    setFormData(row);
   };
 
   const handleAfterPrintDocument = (id) => {
