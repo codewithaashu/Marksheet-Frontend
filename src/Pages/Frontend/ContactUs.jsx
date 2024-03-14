@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../Components/Frontend/Header";
 import SideBar from "../../Components/Frontend/SideBar";
 import ContactUsContainer from "../../Components/Frontend/ContactUsContainer";
 import Footer from "../../Components/Frontend/Footer";
 
 const ContactUs = () => {
+  useEffect(() => {
+    document.getElementById("title").innerText = "Contact Us | CSSE";
+  }, []);
   return (
     <>
       <div className="flex flex-col gap-1 bg-base-100">

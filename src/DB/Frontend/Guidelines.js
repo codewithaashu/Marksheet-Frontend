@@ -4,7 +4,6 @@ const GuideLines = [
   "High School Syllabus",
   "Intermediate Syllabus",
   "Duplicate Marksheet & Migration",
-  "Student Information",
   "Online Result Verification",
 ];
 

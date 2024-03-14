@@ -45,19 +45,7 @@ const Header = () => {
                 </details>
               </li>
               <li>
-                <details>
-                  <summary>Recognition</summary>
-                  <ul className="p-2 bg-cyan-700 text-white border-none">
-                    <li>
-                      <Link to="/govtCertificate">Govt. Certificates</Link>
-                    </li>
-                    <li>
-                      <Link to="/notification-letters">
-                        Notification & Letters
-                      </Link>
-                    </li>
-                  </ul>
-                </details>
+                <Link to="/recognition">Recognition</Link>
               </li>
               <li>
                 <details>
@@ -84,9 +72,6 @@ const Header = () => {
                     </li>
                   </ul>
                 </details>
-              </li>
-              <li>
-                <Link to="/media">Media</Link>
               </li>
               <li>
                 <Link to="/contactus">Contact Us</Link>

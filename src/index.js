@@ -6,13 +6,11 @@ import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import StudentsList from "./Pages/StudentsList";
 import StudentRegistration from "./Pages/StudentRegistration";
-import Results from "./Pages/Results";
 import ChangePassword from "./Pages/ChangePassword";
 import Admins from "./Pages/Admins";
 import CreateAdmin from "./Pages/CreateAdmin";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-import PrintDocument from "./Pages/PrintDocument";
 import Home from "./Pages/Frontend/Home";
 import History from "./Pages/Frontend/History";
 import Welcome from "./Pages/Frontend/Welcome";
@@ -21,15 +19,13 @@ import AimsObjective from "./Pages/Frontend/AimsObjective";
 import WorkPlan from "./Pages/Frontend/WorkPlan";
 import Examination from "./Pages/Frontend/Examination";
 import Reservation from "./Pages/Frontend/Reservation";
-import Media from "./Pages/Frontend/Media";
 import HighSchool from "./Pages/Frontend/HighSchool";
 import Intermediate from "./Pages/Frontend/Intermediate";
 import ContactUs from "./Pages/Frontend/ContactUs";
-import GovtCertificate from "./Pages/Frontend/GovtCertificate";
-import NotificationLetters from "./Pages/Frontend/NotificationLetters";
 import HallTicket from "./Pages/Frontend/HallTicket";
 import Result from "./Pages/Frontend/Result";
 import VerifyRegistration from "./Pages/Frontend/VerifyRegistration";
+import Recognition from "./Pages/Frontend/Recognition";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const userType = localStorage.getItem("userType");
 const router = createBrowserRouter([
@@ -66,10 +62,6 @@ const router = createBrowserRouter([
     element: <Reservation />,
   },
   {
-    path: "/media",
-    element: <Media />,
-  },
-  {
     path: "/highSchool",
     element: <HighSchool />,
   },
@@ -82,12 +74,8 @@ const router = createBrowserRouter([
     element: <ContactUs />,
   },
   {
-    path: "/govtCertificate",
-    element: <GovtCertificate />,
-  },
-  {
-    path: "/notification-letters",
-    element: <NotificationLetters />,
+    path: "/recognition",
+    element: <Recognition />,
   },
   {
     path: "/hallTicket",
@@ -120,14 +108,6 @@ const router = createBrowserRouter([
   {
     path: "/admin/studentRegistration",
     element: userType ? <StudentRegistration /> : <App />,
-  },
-  {
-    path: "/admin/results",
-    element: userType ? <Results /> : <App />,
-  },
-  {
-    path: "/admin/printDocuments",
-    element: userType ? <PrintDocument /> : <App />,
   },
   {
     path: "/admin/changePassword",

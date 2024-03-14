@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../Components/Frontend/Header";
 import SideBar from "../../Components/Frontend/SideBar";
 import HomeContainer from "../../Components/Frontend/HomeContainer";
 import Footer from "../../Components/Frontend/Footer";
 const Home = () => {
+  useEffect(() => {
+    document.getElementById("title").innerText = "Home | CSSE";
+  }, []);
   return (
     <>
       <div className="flex flex-col gap-1 bg-base-100">

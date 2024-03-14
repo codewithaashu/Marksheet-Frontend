@@ -9,7 +9,6 @@ const ContactUsContainer = () => {
           <h1 className="text-[28px] font-semibold border-b-[1px] border-gray-400">
             Contact Us
           </h1>
-
           <EnquiryForm />
           <div className="flex flex-row justify-between mt-4 px-2 items-center">
             <p className="text-xs font-semibold">

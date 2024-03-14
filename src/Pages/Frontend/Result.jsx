@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CheckEmptyField from "../../utility/CheckEmptyField";
 import WarningToast from "../../utility/WarningToast";
 import ErrorToast from "../../utility/ErrorToast";
@@ -12,6 +12,9 @@ const Result = () => {
   const [formData, setFormData] = useState({ regNo: "", dob: "" });
   const [printData, setPrintData] = useState(null);
   const componentRef = useRef();
+  useEffect(() => {
+    document.getElementById("title").innerText = "Result | CSSE";
+  }, []);
   const handlePrintDocument = useReactToPrint({
     content: () => componentRef.current,
     onAfterPrint: () => {

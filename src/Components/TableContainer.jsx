@@ -7,7 +7,6 @@ import { Box, IconButton, Tooltip } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ViewIcon from "@mui/icons-material/RemoveRedEye";
-import ResultModalContainer from "./ResultModalContainer";
 import ErrorToast from "../utility/ErrorToast";
 import axios from "axios";
 import SuccessToast from "../utility/SuccesToast";
@@ -180,15 +179,6 @@ const TableContainer = ({ data, cols, field, setData }) => {
           formData={formData}
           setFormData={setFormData}
           setData={setData}
-        />
-      );
-    } else if (field === "result") {
-      return (
-        <ResultModalContainer
-          formData={formData}
-          setFormData={setFormData}
-          setData={setData}
-          rowData={rowData}
         />
       );
     } else {

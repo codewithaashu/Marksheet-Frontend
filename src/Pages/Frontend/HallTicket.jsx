@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CheckEmptyField from "../../utility/CheckEmptyField";
 import WarningToast from "../../utility/WarningToast";
 import AdmitCard from "../../Certificates/AdmitCard";
@@ -11,12 +11,16 @@ const HallTicket = () => {
   const [formData, setFormData] = useState({ regNo: "", dob: "" });
   const [printData, setPrintData] = useState(null);
   const componentRef = useRef();
+
   const handlePrintDocument = useReactToPrint({
     content: () => componentRef.current,
     onAfterPrint: () => {
       setFormData({ regNo: "", dob: "" });
     },
   });
+  useEffect(() => {
+    document.getElementById("title").innerText = "Admit Card | CSSE";
+  }, []);
   const fetchResult = async () => {
     try {
       const { data } = await axios.post(

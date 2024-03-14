@@ -30,7 +30,6 @@ const StreamComponent = ({
             result: {},
             [field]: e.target.value,
           });
-          // setFormData({ ...formData, [field]: e.target.value });
         }}
         ref={streamInputRef}
       >

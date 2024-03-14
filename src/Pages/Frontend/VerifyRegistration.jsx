@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../assests/csseLogo.png";
 import courses from "../../DB/CoursesDB";
 import axios from "axios";
@@ -9,6 +9,9 @@ import WarningToast from "../../utility/WarningToast";
 import Check from "../../assests/check.png";
 import { useNavigate } from "react-router-dom";
 const VerifyRegistration = () => {
+  useEffect(() => {
+    document.getElementById("title").innerText = "Result Verification | CSSE";
+  }, []);
   const [formData, setFormData] = useState({ course: "", regNo: "", dob: "" });
   const [isVerify, setIsVerified] = useState(false);
   const navigate = useNavigate();
