@@ -25,7 +25,6 @@ const StudentRegistrationContainer = () => {
   const [stream, setStream] = useState(null);
   const [streamChange, setStreamChange] = useState(false);
   const [formData, setFormData] = useState({
-    modeOfResult: "",
     imgSrc: "",
     name: "",
     dob: "",
@@ -109,7 +108,6 @@ const StudentRegistrationContainer = () => {
     if (success) {
       SuccessToast(message ?? "Successfull");
       setFormData({
-        modeOfResult: "",
         imgSrc: "",
         name: "",
         dob: "",
