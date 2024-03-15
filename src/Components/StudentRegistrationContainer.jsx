@@ -134,6 +134,7 @@ const StudentRegistrationContainer = () => {
       }
       setCourse(null);
       setStream(null);
+      setStreamChange(false);
     } else {
       ErrorToast(message ?? "Server Error. Try Again");
     }
@@ -268,7 +269,7 @@ const StudentRegistrationContainer = () => {
                   streamInputRef={streamInputRef}
                   setStreamChange={setStreamChange}
                 />
-                {stream && (
+                {streamChange && (
                   <>
                     <LanguageComponent
                       formData={formData}
