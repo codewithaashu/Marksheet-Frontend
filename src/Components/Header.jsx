@@ -1,9 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Header = ({ sideBar, setSideBar }) => {
-  const username = localStorage.getItem("username");
-  const userType = localStorage.getItem("userType");
   return (
     <div className="navbar bg-white shadow-md sticky top-0 z-50">
       <div className="navbar-start">

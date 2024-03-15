@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import InputComponent from "./InputComponent";
-import SelectComponent from "./SelectComponent";
 import axios from "axios";
 import SuccessToast from "../utility/SuccesToast";
 import ErrorToast from "../utility/ErrorToast";
