@@ -1,11 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import years from "../DB/Years";
-import {
-  artsSubjects,
-  commerceSubjects,
-  scienceSubjects,
-  secondoryOptionalSubjects,
-} from "../DB/SubjectsDB";
 import InputComponent from "./InputComponent";
 import SelectComponent from "./SelectComponent";
 import SelectCourse from "./SelectCourse";
@@ -23,7 +17,6 @@ import SuccessToast from "../utility/SuccesToast";
 const StudentRegistrationContainer = () => {
   const [course, setCourse] = useState(null);
   const [stream, setStream] = useState(null);
-  const [streamChange, setStreamChange] = useState(false);
   const [formData, setFormData] = useState({
     imgSrc: "",
     name: "",
@@ -48,41 +41,7 @@ const StudentRegistrationContainer = () => {
   const genderInputRef = useRef();
   const courseInputRef = useRef();
   const streamInputRef = useRef();
-  const seniorSecondary = () => {
-    if (stream === "Science") {
-      return (
-        <OptionalSubjectComponent
-          formData={formData}
-          setFormData={setFormData}
-          secondoryOptionalSubjects={scienceSubjects}
-          seniorSecondary={true}
-          stream={stream}
-          isMarks={true}
-        />
-      );
-    } else if (stream === "Commerce") {
-      return (
-        <OptionalSubjectComponent
-          formData={formData}
-          setFormData={setFormData}
-          secondoryOptionalSubjects={commerceSubjects}
-          seniorSecondary={true}
-          stream={stream}
-          isMarks={true}
-        />
-      );
-    }
-    return (
-      <OptionalSubjectComponent
-        formData={formData}
-        setFormData={setFormData}
-        secondoryOptionalSubjects={artsSubjects}
-        seniorSecondary={true}
-        stream={stream}
-        isMarks={true}
-      />
-    );
-  };
+
   const registerStudent = async () => {
     try {
       const { data } = await axios.post(
@@ -134,7 +93,6 @@ const StudentRegistrationContainer = () => {
       }
       setCourse(null);
       setStream(null);
-      setStreamChange(false);
     } else {
       ErrorToast(message ?? "Server Error. Try Again");
     }
@@ -267,16 +225,21 @@ const StudentRegistrationContainer = () => {
                   setFormData={setFormData}
                   formData={formData}
                   streamInputRef={streamInputRef}
-                  setStreamChange={setStreamChange}
                 />
-                {streamChange && (
+                {stream && (
                   <>
                     <LanguageComponent
                       formData={formData}
                       setFormData={setFormData}
                       isMarks={true}
                     />
-                    {seniorSecondary()}
+                    <OptionalSubjectComponent
+                      formData={formData}
+                      setFormData={setFormData}
+                      seniorSecondary={true}
+                      stream={stream}
+                      isMarks={true}
+                    />
                   </>
                 )}
               </>
@@ -290,7 +253,6 @@ const StudentRegistrationContainer = () => {
                 <OptionalSubjectComponent
                   formData={formData}
                   setFormData={setFormData}
-                  secondoryOptionalSubjects={secondoryOptionalSubjects}
                   seniorSecondary={false}
                   isMarks={true}
                 />

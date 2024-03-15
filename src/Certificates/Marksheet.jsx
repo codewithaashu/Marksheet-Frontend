@@ -148,17 +148,17 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
                     Subject
                   </div>
                   <div className="border-2 border-gray-700 flex flex-col gap-2 px-0">
-                    <div>{firstLanguage.slice(0, 20)}</div>
-                    <div>{secondLanguage.slice(0, 20)}</div>
-                    <div>{option1.slice(0, 20)}</div>
-                    <div>{option2.slice(0, 20)}</div>
-                    <div>{option3.slice(0, 20)}</div>
+                    <div>{firstLanguage.slice(0, 18)}</div>
+                    <div>{secondLanguage.slice(0, 18)}</div>
+                    <div>{option1.slice(0, 18)}</div>
+                    <div>{option2.slice(0, 18)}</div>
+                    <div>{option3.slice(0, 18)}</div>
                     <div>
                       {course === "Secondary Examination(10th Class)"
                         ? option4
                         : `${option4.slice(0, 18)} [Opt]`}
                     </div>
-                    {option5 && <div>{option5.slice(0, 20)}</div>}
+                    {option5 && <div>{option5.slice(0, 18)}</div>}
                   </div>
                 </div>
                 <div className="flex flex-col gap-2 flex-1">

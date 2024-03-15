@@ -39,12 +39,12 @@ const secondoryOptionalSubjects = [
   { value: "DRAWING AND CRAFT ", label: "DRAWING AND CRAFT " },
   { value: "SOCIAL SCIENCE ", label: "SOCIAL SCIENCE " },
   {
-    value: "HEALTH AND PHYSICAL EDUCATION ",
-    label: "HEALTH AND PHYSICAL EDUCATION ",
+    value: "HEALTH AND PHYSICAL EDU ",
+    label: "HEALTH AND PHYSICAL EDU ",
   },
   { value: "WORK EDUCATION", label: "WORK EDUCATION" },
   { value: "SINGING", label: "SINGING" },
-  { value: "SCIENCE AND TECHNOLOGY", label: "SCIENCE AND TECHNOLOGY" },
+  { value: "SCIENCE AND TECH", label: "SCIENCE AND TECHNOLOGY" },
 ];
 
 const scienceSubjects = [
@@ -55,8 +55,8 @@ const scienceSubjects = [
   { value: "STATISTICS", label: "STATISTICS" },
   { value: "COMPUTER SCIENCE", label: "COMPUTER SCIENCE" },
   {
-    value: "SCIENCE AND TECHONOLOGY",
-    label: "SCIENCE AND TECHONOLOGY",
+    value: "SCIENCE AND TECH",
+    label: "SCIENCE AND TECH",
   },
   { value: "APPLIED MATHEMATICS", label: "APPLIED MATHEMATICS" },
   { value: "NUTRITION", label: "NUTRITION" },

@@ -21,7 +21,7 @@ const InputComponent = ({
               ? isMarks
                 ? formData?.result[field]
                 : formData?.[field]
-              : formData?.[field]
+              : formData?.[field]?.toUpperCase()
           }
           className={`file-input ${
             isResult ? "w-full" : "w-full"
@@ -33,7 +33,10 @@ const InputComponent = ({
               result[field] = e.target.value;
               setFormData({ ...formData, result });
             } else {
-              setFormData({ ...formData, [field]: e.target.value });
+              setFormData({
+                ...formData,
+                [field]: e.target.value.toUpperCase(),
+              });
             }
           }}
         />

@@ -9,7 +9,6 @@ const StreamComponent = ({
   setFormData,
   formData,
   streamInputRef,
-  setStreamChange,
 }) => {
   return (
     <div className="flex flex-col gap-1 ">
@@ -18,7 +17,7 @@ const StreamComponent = ({
         className="select  w-full max-w-xs h-fit p-2 bg-white text-base border-[1px] border-gray-400 outline-none rounded-sm text-gray-700 focus:outline-none"
         defaultValue={formData[field]}
         onChange={(e) => {
-          setStreamChange(true);
+          setStream(e.target.value);
           setFormData({
             ...formData,
             firstLanguage: "",

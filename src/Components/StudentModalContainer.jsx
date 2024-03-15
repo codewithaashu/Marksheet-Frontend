@@ -26,7 +26,6 @@ const StudentModalContainer = ({ formData, setFormData, setData }) => {
   const streamInputRef = useRef();
   const [userType, setUserType] = useState(null);
   const [stream, setStream] = useState(null);
-  const [streamChange, setStreamChange] = useState(false);
   useEffect(() => {
     genderInputRef.current.value = formData.gender;
     yearInputRef.current.value = formData.year;
@@ -262,16 +261,21 @@ const StudentModalContainer = ({ formData, setFormData, setData }) => {
                   setFormData={setFormData}
                   formData={formData}
                   streamInputRef={streamInputRef}
-                  setStreamChange={setStreamChange}
                 />
-                {streamChange && (
+                {stream && (
                   <>
                     <LanguageComponent
                       formData={formData}
                       setFormData={setFormData}
                       isMarks={true}
                     />
-                    {seniorSecondary()}
+                    <OptionalSubjectComponent
+                      formData={formData}
+                      setFormData={setFormData}
+                      seniorSecondary={true}
+                      stream={stream}
+                      isMarks={true}
+                    />
                   </>
                 )}
               </>
@@ -279,7 +283,7 @@ const StudentModalContainer = ({ formData, setFormData, setData }) => {
             {userType === "Super Admin" &&
               (formData.course === "SR. Secondary Examination(12th Class)"
                 ? formData?.result &&
-                  !streamChange && (
+                  !stream && (
                     <>
                       <LanguageComponent
                         formData={formData}

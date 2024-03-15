@@ -1,15 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Select from "react-select";
 import InputComponent from "./InputComponent";
+import {
+  artsSubjects,
+  commerceSubjects,
+  scienceSubjects,
+  secondoryOptionalSubjects,
+} from "../DB/SubjectsDB";
 const OptionalSubjectComponent = ({
   formData,
   setFormData,
-  secondoryOptionalSubjects,
   seniorSecondary,
   stream,
-  isMarks,
 }) => {
-  const [options, setOptions] = useState(secondoryOptionalSubjects);
+  const [options, setOptions] = useState(null);
+  useEffect(() => {
+    if (seniorSecondary) {
+      if (stream === "Science") {
+        setOptions(scienceSubjects);
+      } else if (stream === "Commerce") {
+        setOptions(commerceSubjects);
+      } else {
+        setOptions(artsSubjects);
+      }
+    } else {
+      setOptions(secondoryOptionalSubjects);
+    }
+  }, [stream]);
   return (
     <>
       <div className="grid grid-cols-3 gap-5 w-full justify-between">

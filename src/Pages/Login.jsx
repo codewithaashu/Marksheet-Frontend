@@ -67,22 +67,30 @@ const Login = () => {
           formData={formData}
           setFormData={setFormData}
         />
-        <InputComponent
-          label={"Username"}
-          inputType={"text"}
-          field={"username"}
-          formData={formData}
-          setFormData={setFormData}
-          placeholder={"Enter Username Here..."}
-        />
-        <InputComponent
-          label={"Password"}
-          inputType={"password"}
-          field={"password"}
-          formData={formData}
-          setFormData={setFormData}
-          placeholder={"Enter Password Here..."}
-        />
+        <div className="flex flex-col gap-1">
+          <h1 className="text-[15px] font-medium text-gray-600">Username</h1>
+          <input
+            type="text"
+            value={formData.username}
+            className={`file-input w-full  h-fit p-2 bg-white text-sm border-[1px] border-gray-800 text-gray-700 focus:outline-none placeholder:text-sm py-3`}
+            placeholder="Enter Username Here..."
+            onChange={(e) => {
+              setFormData({ ...formData, username: e.target.value });
+            }}
+          />
+        </div>
+        <div className="flex flex-col gap-1">
+          <h1 className="text-[15px] font-medium text-gray-600">Password</h1>
+          <input
+            type="password"
+            value={formData.password}
+            className={`file-input w-full  h-fit p-2 bg-white text-sm border-[1px] border-gray-800 text-gray-700 focus:outline-none placeholder:text-sm py-3`}
+            placeholder="Enter Password Here..."
+            onChange={(e) => {
+              setFormData({ ...formData, password: e.target.value });
+            }}
+          />
+        </div>
         <button
           className="bg-blue py-2 text-white text-lg font-bold mt-5"
           onClick={handleLogin}
