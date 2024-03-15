@@ -27,7 +27,6 @@ const EnquiryForm = () => {
       `${process.env.REACT_APP_SERVER_BASE_URL}/api/message`,
       formData
     );
-    console.log(data);
     if (!data.success) {
       ErrorToast(data.message);
       return;
