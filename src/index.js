@@ -26,6 +26,7 @@ import HallTicket from "./Pages/Frontend/HallTicket";
 import Result from "./Pages/Frontend/Result";
 import VerifyRegistration from "./Pages/Frontend/VerifyRegistration";
 import Recognition from "./Pages/Frontend/Recognition";
+import ResultPage from "./Pages/Frontend/ResultPage";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const userType = localStorage.getItem("userType");
 const router = createBrowserRouter([
@@ -84,6 +85,10 @@ const router = createBrowserRouter([
   {
     path: "/result",
     element: <Result />,
+  },
+  {
+    path: "/printResult",
+    element: <ResultPage />,
   },
   {
     path: "/verify",

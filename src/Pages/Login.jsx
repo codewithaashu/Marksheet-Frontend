@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import SelectComponent from "../Components/SelectComponent";
-import InputComponent from "../Components/InputComponent";
 import { useNavigate } from "react-router-dom";
 import CheckEmptyField from "../utility/CheckEmptyField";
 import WarningToast from "../utility/WarningToast";

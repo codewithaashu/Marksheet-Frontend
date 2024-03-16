@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import dateFormat from "dateformat";
 import converter from "number-to-words";
+import PercentageGrade from "../DB/Frontend/PercentageGrade";
 const Marksheet = React.forwardRef(({ data }, ref) => {
   const [totalMarks, setTotalMarks] = useState(null);
   const {
@@ -63,6 +64,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
       totalMarks.push(mark);
     }
     setTotalMarks(totalMarks);
+
     return () => {
       setTotalMarks(null);
     };
@@ -275,7 +277,13 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
                        : "h-[140px]"
                    } border-gray-700 justify-center flex flex-col`}
                   >
-                    <div>A</div>
+                    <div>
+                      {
+                        PercentageGrade(
+                          parseInt(calculateTotalMarks() / totalMarks?.length)
+                        ).scale
+                      }
+                    </div>
                   </div>
                 </div>
               </div>
@@ -283,11 +291,14 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
                 <div className="py-1 border-2 border-gray-700 w-[49%] text-center">
                   Grand Total:&nbsp;{calculateTotalMarks()}
                 </div>
-                <div className="py-1 border-2 border-gray-700 w-[26.5%] text-center">
-                  Status: PASS
+                <div className="py-1 border-2 border-gray-700 w-[26.5%] text-center uppercase">
+                  Status:{" "}
+                  {parseInt(calculateTotalMarks() / totalMarks?.length) >= 34
+                    ? "Pass"
+                    : "Fail"}
                 </div>
                 <div className="py-1 border-2 border-gray-700 flex-1 text-center w-[20%]">
-                  Percentage(%):{" "}
+                  Percentage(%):
                   {(calculateTotalMarks() / totalMarks?.length).toFixed(2)}
                 </div>
               </div>

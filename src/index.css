@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.backgroundLogo {
+  background: url("../public/background.png") no-repeat center;
+}
 @media print {
   @page {
     size: A4;
