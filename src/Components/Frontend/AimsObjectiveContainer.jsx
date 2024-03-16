@@ -26,31 +26,31 @@ const AimsObjectiveContainer = () => {
           organization has been carrying out some research work also over the
           last 3-4 years. With the aim and objective of enhancing and
           accelerating the enrolment/ retention at secondary and senior/
-          secondary level, Rural Institute of Open Schooling (CSSE) was
-          conceived and has been set up as an autonomous registered body under
-          the Societies Registration Act, with its registered office at Delhi
-          with the following objectives: To provide secondary and senior
-          secondary education those belonging to disadvantaged groups (e.g. the
-          Scheduled Castes, the Scheduled Tribes, Socially and Educationally
-          disadvantaged classes and other socially, culturally, economically,
-          geographically sections of the society, or such other factors as may
-          be specified/ notified by the appropriate Government) and people
-          belonging to weaker sections who are not able to get secondary and
-          senior secondary education in the normal course of life. To provide
-          professional services to the government and other agencies in the
-          field of education, in general, and school education, in particular,
-          for the development and growth of distance and open school system and
-          develop appropriate curriculum for vocational and continuing education
-          to prepare student population for the world of work. To provide the
-          best possible teaching/ learning environment to its students, so that
-          they can serve the society effectively and with dignity individualized
-          study with flexibility in terms of place and duration. To identify
-          educational needs of the children/persons of the State who are
-          otherwise not catered to by the formal system of school education and
-          to open study/academic centers. To provide opportunities for school
-          education up to pre-degree level through Open and Distance Learning
-          (ODL) mode, to identify and promote standards of learning in Open and
-          Distance Learning system. To design and develop courses,
+          secondary level, Council for Secondary and Senior Secondary Education
+          (CSSE) was conceived and has been set up as an autonomous registered
+          body under the Societies Registration Act, with its registered office
+          at Delhi with the following objectives: To provide secondary and
+          senior secondary education those belonging to disadvantaged groups
+          (e.g. the Scheduled Castes, the Scheduled Tribes, Socially and
+          Educationally disadvantaged classes and other socially, culturally,
+          economically, geographically sections of the society, or such other
+          factors as may be specified/ notified by the appropriate Government)
+          and people belonging to weaker sections who are not able to get
+          secondary and senior secondary education in the normal course of life.
+          To provide professional services to the government and other agencies
+          in the field of education, in general, and school education, in
+          particular, for the development and growth of distance and open school
+          system and develop appropriate curriculum for vocational and
+          continuing education to prepare student population for the world of
+          work. To provide the best possible teaching/ learning environment to
+          its students, so that they can serve the society effectively and with
+          dignity individualized study with flexibility in terms of place and
+          duration. To identify educational needs of the children/persons of the
+          State who are otherwise not catered to by the formal system of school
+          education and to open study/academic centers. To provide opportunities
+          for school education up to pre-degree level through Open and Distance
+          Learning (ODL) mode, to identify and promote standards of learning in
+          Open and Distance Learning system. To design and develop courses,
           self-instructional materials (SIM) and other learning support for the
           courses identified at different points of time, to organize
           orientation and training programmes for the functionaries of the open

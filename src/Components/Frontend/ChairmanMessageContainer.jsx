@@ -44,8 +44,8 @@ const ChairmanMessageContainer = () => {
             minimum of five subjects with at least one language or at most two
             languages, which is compulsory for certification.
             <div className="text-end font-semibold">
-              Sd/- <br /> Chairman Rural Institute of Open Schooling <br />{" "}
-              Delhi.
+              Sd/- <br /> Chairman Council for Secondary and Senior Secondary
+              Education <br /> Delhi.
             </div>
           </p>
         </div>

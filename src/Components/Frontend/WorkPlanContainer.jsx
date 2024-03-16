@@ -34,7 +34,7 @@ const WorkPlanContainer = () => {
                 <div className="flex flex-col gap-1">
                   <h1 className="text-sm">- Open Schooling in India</h1>
                   <h1 className="text-sm">
-                    - Rural Institute of Open Schooling
+                    - Council for Secondary and Senior Secondary Education
                   </h1>
                   <h1 className="text-sm">
                     - Secondary education and Vocational training
