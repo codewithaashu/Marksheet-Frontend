@@ -22,6 +22,7 @@ const Result = () => {
         `${process.env.REACT_APP_SERVER_BASE_URL}/api/result`,
         formData
       );
+      setLoading(false);
       if (!data.success) {
         ErrorToast(data.message);
         return;
