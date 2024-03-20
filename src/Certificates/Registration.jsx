@@ -23,7 +23,7 @@ const Registration = React.forwardRef(({ data }, ref) => {
     return `${year}-06-15`;
   };
   return (
-    <div ref={ref} className="w-full h-full pt-[60px] px-32">
+    <div ref={ref} className="w-full h-full pt-9 px-10">
       <style type="text/css" media="print">
         {
           "\
@@ -31,8 +31,8 @@ const Registration = React.forwardRef(({ data }, ref) => {
       "
         }
       </style>
-      ;<h1 className="text-[16px] font-extrabold text-end px-6">7168</h1>
-      <div className="pt-80 ">
+      ;<h1 className="text-[16px] font-bold text-end px-[70px]">7168</h1>
+      <div className="pt-[200px] px-10">
         <div className="text-sm font-semibold">
           Certify that
           <span className="text-base font-bold uppercase px-[5px]">{name}</span>
@@ -45,10 +45,10 @@ const Registration = React.forwardRef(({ data }, ref) => {
           <span className="text-base font-bold uppercase px-[5px]">
             {regNo}
           </span>
-          <h1 className="py-3 text-base font-bold uppercase text-center">
+          <h1 className="py-2 text-base font-bold uppercase text-center">
             Subjects
           </h1>
-          <div className="border-2 border-gray-500  w-full p-[2px]">
+          <div className="border-2 border-gray-500  w-full p-[2px] pb-0">
             <div className="uppercase text-sm font-semibold  border-2 border-gray-700 text-center">
               {`${firstLanguage}, ${secondLanguage}, ${option1}, ${option2}, ${option3}, ${option4},
               ${option5 ? option5 : ""}`}
@@ -56,7 +56,7 @@ const Registration = React.forwardRef(({ data }, ref) => {
           </div>
         </div>
       </div>
-      <h1 className="text-[17px] font-extrabold pt-36 px-16">
+      <h1 className="text-[17px] font-bold pt-[78px] px-[110px]">
         {dateFormat(issueDate(), "dd mmm yyyy")}
       </h1>
     </div>

@@ -11,7 +11,7 @@ const Migration = React.forwardRef(({ data }, ref) => {
     return `${year}-06-15`;
   };
   return (
-    <div ref={ref} className="w-full h-full pt-[60px] px-32">
+    <div ref={ref} className="w-full h-full pt-[55px] px-10">
       <style type="text/css" media="print">
         {
           "\
@@ -19,8 +19,8 @@ const Migration = React.forwardRef(({ data }, ref) => {
 "
         }
       </style>
-      <h1 className="text-[16px] font-extrabold text-end px-6">7168</h1>
-      <div className="pt-80 ">
+      <h1 className="text-[16px] font-bold text-end px-[70px]">7168</h1>
+      <div className="pt-[215px] ">
         <div className="text-sm font-semibold">
           This is certify that
           <span className="text-base font-bold uppercase px-[5px]">{name}</span>
@@ -43,14 +43,14 @@ const Migration = React.forwardRef(({ data }, ref) => {
           an institute affliated with the board has been registered in the
           <span className="text-base font-bold uppercase px-[5px]">{year}</span>
           Secondary Examination of the board.
-          <h1 className="py-3">
+          <h1 className="py-2">
             The board has no objection in his/her joining any recognised
             College/Institute or taking examination of any University or Board
             established by law.{" "}
           </h1>
         </div>
       </div>
-      <h1 className="text-[17px] font-extrabold pt-[120px] px-16">
+      <h1 className="text-[17px] font-bold pt-[52px] px-[108px]">
         {dateFormat(issueDate(), "dd mmm yyyy")}
       </h1>
     </div>
