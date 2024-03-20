@@ -84,7 +84,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
     return `${year}-06-15`;
   };
   return (
-    <div ref={ref} className="w-full h-full pt-20 px-[90px]">
+    <div ref={ref} className="w-full h-full pt-16 px-[80px]">
       <style type="text/css" media="print">
         {
           "\
@@ -97,7 +97,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
         <div className="flex flex-row justify-end px-2">
           <img src={imgSrc} alt="Student" className="w-[95px] h-[110px]" />
         </div>
-        <div className="flex flex-col pt-32 items-center text-lg font-semibold font-[roboto-medium]">
+        <div className="flex flex-col pt-20 items-center text-lg font-semibold font-[roboto-medium]">
           <div className="flex flex-col gap-0 items-center">
             <div className="text-lg font-semibold font-[roboto-medium] uppercase">
               {course}
