@@ -84,7 +84,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
     return `${year}-06-15`;
   };
   return (
-    <div ref={ref} className="w-full h-full pt-16 px-[85px]">
+    <div ref={ref} className="w-full h-full pt-[68px] px-[85px]">
       <style type="text/css" media="print">
         {
           "\
@@ -315,7 +315,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
               <div>*** AB: ABSENT IN THE SUBJECT</div>
               <div>WWW.CSSE.CO.IN</div>
             </div>
-            <div className="text-[16px] font-bold pt-[99px] px-[135px]">
+            <div className="text-[16px] font-bold pt-[98px] px-[136px]">
               {dateFormat(issueDate(), "dd mmm yyyy")}
             </div>
           </div>

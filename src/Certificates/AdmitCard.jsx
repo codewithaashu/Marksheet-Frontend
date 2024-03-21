@@ -18,7 +18,7 @@ const AdmitCard = React.forwardRef(({ data }, ref) => {
     gender,
   } = data;
   return (
-    <div ref={ref} className="w-full h-full pt-[-130px] px-[90px]">
+    <div ref={ref} className="w-full h-full pt-[-240px] px-[75px]">
       <style type="text/css" media="print">
         {
           "\
