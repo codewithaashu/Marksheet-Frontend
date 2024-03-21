@@ -22,60 +22,58 @@ const AdmitCard = React.forwardRef(({ data }, ref) => {
       <style type="text/css" media="print">
         {
           "\
- @page { size:210mm 297mm; }\
+ @page { size:A5; }\
 "
         }
       </style>
       <h1 className="text-[16px] font-extrabold text-end">7168</h1>
-      <div className="pt-24">
+      <div className="pt-16">
         <div className="flex flex-row justify-end px-2">
           <img src={imgSrc} alt="Student" className="w-[95px] h-[110px]" />
         </div>
-        <div className="flex flex-col pt-[72px]  text-lg font-semibold font-[roboto-medium]">
+        <div className="flex flex-col pt-12  text-base font-semibold font-[roboto-medium]">
           <div className="grid grid-cols-2 w-full gap-40">
-            <div className="flex flex-row items-center gap-8">
-              <h1 className="font-[roboto-medium] text-base">
+            <div className="flex flex-row items-center gap-5">
+              <h1 className="text-sm font-normal">
                 Registration <br /> No.
               </h1>
-              <h1 className="text-lg font-semibold font-[roboto-medium]">
+              <h1 className="text-base font-semibold font-[roboto-medium]">
                 {regNo}
               </h1>
             </div>
-            <div className="flex flex-row items-center gap-8">
-              <h1 className="text-base font-[roboto-medium]">Roll No.</h1>
-              <h1 className="text-lg font-semibold font-[roboto-medium]">
+            <div className="flex flex-row items-center gap-5">
+              <h1 className="text-sm font-normal">Roll No.</h1>
+              <h1 className="text-base font-semibold font-[roboto-medium]">
                 {rollNo}
               </h1>
             </div>
           </div>
-          <div className="flex flex-row pt-12 w-full gap-8 justify-start">
-            <div className="flex flex-col gap-3 ">
-              <h1 className="text-base font-normal ">CANDIDATE NAME</h1>
-              <h1 className="text-base font-normal">DATE OF BIRTH</h1>
-              <h1 className="text-base font-normal">SEX</h1>
-              <h1 className="text-base font-normal">FATHER'S NAME</h1>
-              <h1 className="text-base font-normal">CENTRE NAME</h1>
+          <div className="flex flex-row pt-6 w-full gap-5">
+            <div className="flex flex-col gap-2 min-w-fit">
+              <h1 className="text-sm font-normal ">CANDIDATE NAME</h1>
+              <h1 className="text-sm font-normal">DATE OF BIRTH</h1>
+              <h1 className="text-sm font-normal">SEX</h1>
+              <h1 className="text-sm font-normal">FATHER'S NAME</h1>
+              <h1 className="text-sm font-normal">CENTRE NAME</h1>
             </div>
-            <div className="flex flex-col gap-2">
-              <h1 className="text-lg font-semibold font-[roboto-medium] uppercase">
-                {name}
-              </h1>
-              <h1 className="text-lg font-semibold font-[roboto-medium] uppercase">
+            <div className="flex flex-col gap-2 min-w-fit">
+              <h1 className="text-sm font-[roboto-medium] uppercase">{name}</h1>
+              <h1 className="text-sm  font-[roboto-medium] uppercase">
                 {dateFormat(dob, "dd mmm yyyy")}
               </h1>
-              <h1 className="text-lg font-semibold font-[roboto-medium] uppercase">
+              <h1 className="text-sm font-[roboto-medium] uppercase">
                 {gender}
               </h1>
-              <h1 className="text-lg font-semibold font-[roboto-medium] uppercase">
+              <h1 className="text-sm font-semibold font-[roboto-medium] uppercase">
                 {fatherName}
               </h1>
-              <h1 className="text-lg font-semibold font-[roboto-medium] ">
+              <h1 className="text-sm font-semibold font-[roboto-medium] ">
                 Navin Bharti Senior Secondary School
               </h1>
             </div>
           </div>
-          <div className="mt-16 border-2 border-gray-500 flex flex-col  w-full p-[2px]">
-            <h1 className="border-2 border-gray-700 text-center text-base font-semibold font-[roboto-medium] mb-[2px]">
+          <div className="mt-3 border-2 border-gray-500 flex flex-col  w-full p-[2px]">
+            <h1 className="border-2 border-gray-700 text-center text-sm font-semibold font-[roboto-medium] mb-[2px]">
               SUBJECTS
             </h1>
             <div
