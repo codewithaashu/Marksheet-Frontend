@@ -22,7 +22,7 @@ const AdmitCard = React.forwardRef(({ data }, ref) => {
       <style type="text/css" media="print">
         {
           "\
- @page { size:210mm 148mm; }\
+ @page { size:A5; }\
 "
         }
       </style>
