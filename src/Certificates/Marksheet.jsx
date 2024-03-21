@@ -107,7 +107,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
             </div>
           </div>
           <div className="pt-10 w-full flex flex-col">
-            <div className="flex flex-row w-full justify-between px-5">
+            <div className="flex flex-row w-full justify-between ">
               <div className="flex flex-row gap-5">
                 <div className="flex flex-col text-sm  gap-2">
                   <div>NAME</div>
@@ -133,7 +133,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
                 </div>
               </div>
             </div>
-            <div className="border-2 border-gray-500 mt-[6px] p-[2px] mx-5">
+            <div className="border-2 border-gray-500 mt-[6px] p-[2px]">
               <div className="flex flex-row text-xs text-center gap-[4px] ">
                 <div className="flex flex-col gap-[2px] w-[6%]">
                   <div className="h-[58px] flex flex-col justify-center px-2 border-2 border-gray-700">
@@ -304,7 +304,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
               </div>
             </div>
             <div
-              className="flex flex-col gap-0 text-[6px] font-normal mt-2 px-8"
+              className="flex flex-col gap-0 text-[6px] font-normal mt-2"
               style={{ lineHeight: "7px" }}
             >
               <div>
@@ -315,7 +315,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
               <div>*** AB: ABSENT IN THE SUBJECT</div>
               <div>WWW.CSSE.CO.IN</div>
             </div>
-            <div className="text-[16px] font-bold pt-24 px-32">
+            <div className="text-[16px] font-bold pt-[98px] px-[135px]">
               {dateFormat(issueDate(), "dd mmm yyyy")}
             </div>
           </div>
