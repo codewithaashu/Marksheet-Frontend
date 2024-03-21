@@ -32,7 +32,7 @@ const Registration = React.forwardRef(({ data }, ref) => {
         }
       </style>
       ;<h1 className="text-[16px] font-bold text-end px-[70px]">7168</h1>
-      <div className="pt-[200px] px-10">
+      <div className="pt-[200px] px-8">
         <div className="text-sm font-semibold">
           Certify that
           <span className="text-base font-bold uppercase px-[5px]">{name}</span>

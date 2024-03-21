@@ -34,7 +34,7 @@ const Certificate = React.forwardRef(({ data }, ref) => {
         }
       </style>
       <h1 className="text-[16px] font-extrabold text-end">7168</h1>
-      <div className="pt-[350px]">
+      <div className="pt-[350px] px-8">
         <div className="flex flex-col w-full gap-1 justify-start text-lg">
           <div className="text-[15px] font-semibold">
             This is to certify that
