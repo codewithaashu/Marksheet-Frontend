@@ -50,7 +50,7 @@ const Migration = React.forwardRef(({ data }, ref) => {
           </h1>
         </div>
       </div>
-      <h1 className="text-[17px] font-bold pt-[57px] px-[120px]">
+      <h1 className="text-[17px] font-bold pt-[58px] px-[123px]">
         {dateFormat(issueDate(), "dd mmm yyyy")}
       </h1>
     </div>

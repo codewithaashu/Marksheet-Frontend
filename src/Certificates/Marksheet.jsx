@@ -84,7 +84,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
     return `${year}-06-15`;
   };
   return (
-    <div ref={ref} className="w-full h-full pt-16 px-[80px]">
+    <div ref={ref} className="w-full h-full pt-16 px-[85px]">
       <style type="text/css" media="print">
         {
           "\
@@ -94,7 +94,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
       </style>
       <div className="text-[16px] font-extrabold text-end">7168</div>
       <div className="pt-28">
-        <div className="flex flex-row justify-end px-2">
+        <div className="flex flex-row justify-end px-1">
           <img src={imgSrc} alt="Student" className="w-[95px] h-[110px]" />
         </div>
         <div className="flex flex-col pt-20 items-center text-lg font-semibold font-[roboto-medium]">
@@ -315,7 +315,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
               <div>*** AB: ABSENT IN THE SUBJECT</div>
               <div>WWW.CSSE.CO.IN</div>
             </div>
-            <div className="text-[16px] font-bold pt-[98px] px-[135px]">
+            <div className="text-[16px] font-bold pt-[99px] px-[135px]">
               {dateFormat(issueDate(), "dd mmm yyyy")}
             </div>
           </div>
