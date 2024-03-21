@@ -32,7 +32,7 @@ const Registration = React.forwardRef(({ data }, ref) => {
         }
       </style>
       ;<h1 className="text-[16px] font-bold text-end px-[70px]">7168</h1>
-      <div className="pt-[202px] px-8">
+      <div className="pt-[203px] px-8">
         <div className="text-sm font-semibold">
           Certify that
           <span className="text-base font-bold uppercase px-[5px]">{name}</span>
@@ -56,7 +56,7 @@ const Registration = React.forwardRef(({ data }, ref) => {
           </div>
         </div>
       </div>
-      <h1 className="text-[17px] font-bold pt-[76px] px-[123px]">
+      <h1 className="text-[17px] font-bold pt-[76px] px-[125px]">
         {dateFormat(issueDate(), "dd mmm yyyy")}
       </h1>
     </div>
