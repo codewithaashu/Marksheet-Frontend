@@ -315,7 +315,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
               <div>*** AB: ABSENT IN THE SUBJECT</div>
               <div>WWW.CSSE.CO.IN</div>
             </div>
-            <div className="text-[16px] font-extrabold pt-24 px-28">
+            <div className="text-[16px] font-bold pt-24 px-32">
               {dateFormat(issueDate(), "dd mmm yyyy")}
             </div>
           </div>

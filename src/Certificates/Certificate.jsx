@@ -25,7 +25,7 @@ const Certificate = React.forwardRef(({ data }, ref) => {
     return `${year}-06-15`;
   };
   return (
-    <div ref={ref} className="w-full h-full pt-[75px] px-[90px]">
+    <div ref={ref} className="w-full h-full pt-[82px] px-[90px]">
       <style type="text/css" media="print">
         {
           "\
@@ -119,7 +119,7 @@ const Certificate = React.forwardRef(({ data }, ref) => {
           </div>
         </div>
       </div>
-      <h1 className="text-[17px] font-extrabold pt-44 px-32">
+      <h1 className="text-[17px] font-bold pt-[172px] px-[132px]">
         {dateFormat(issueDate(), "dd mmm yyyy")}
       </h1>
     </div>

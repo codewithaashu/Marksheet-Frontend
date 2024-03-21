@@ -18,12 +18,12 @@ const Registration = React.forwardRef(({ data }, ref) => {
     const date = new Date(`${year}-06-15`);
     const day = date.getDay();
     if (day === 0) {
-      return `${year}-06-16`;
+      return `${year}-04-16`;
     }
-    return `${year}-06-15`;
+    return `${year}-04-15`;
   };
   return (
-    <div ref={ref} className="w-full h-full pt-9 px-10">
+    <div ref={ref} className="w-full h-full pt-[30px] px-10">
       <style type="text/css" media="print">
         {
           "\
@@ -56,7 +56,7 @@ const Registration = React.forwardRef(({ data }, ref) => {
           </div>
         </div>
       </div>
-      <h1 className="text-[17px] font-bold pt-[78px] px-[110px]">
+      <h1 className="text-[17px] font-bold pt-[78px] px-[115px]">
         {dateFormat(issueDate(), "dd mmm yyyy")}
       </h1>
     </div>
