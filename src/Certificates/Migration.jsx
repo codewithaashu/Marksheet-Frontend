@@ -11,7 +11,7 @@ const Migration = React.forwardRef(({ data }, ref) => {
     return `${year}-06-15`;
   };
   return (
-    <div ref={ref} className="w-full h-full pt-[60px] px-10">
+    <div ref={ref} className="w-full h-full pt-[63px] px-10">
       <style type="text/css" media="print">
         {
           "\
@@ -50,7 +50,7 @@ const Migration = React.forwardRef(({ data }, ref) => {
           </h1>
         </div>
       </div>
-      <h1 className="text-[17px] font-bold pt-[57px] px-[132px]">
+      <h1 className="text-[17px] font-bold pt-[57px] px-[135px]">
         {dateFormat(issueDate(), "dd mmm yyyy")}
       </h1>
     </div>
