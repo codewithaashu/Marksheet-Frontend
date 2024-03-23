@@ -23,7 +23,7 @@ const Registration = React.forwardRef(({ data }, ref) => {
     return `${year}-04-15`;
   };
   return (
-    <div ref={ref} className="w-full h-full pt-[30px] px-8">
+    <div ref={ref} className="w-full h-full pt-[29px] px-8">
       <style type="text/css" media="print">
         {
           "\
