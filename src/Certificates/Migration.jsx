@@ -11,7 +11,7 @@ const Migration = React.forwardRef(({ data }, ref) => {
     return `${year}-06-15`;
   };
   return (
-    <div ref={ref} className="w-full h-full pt-[63px] px-10">
+    <div ref={ref} className="w-full h-full pt-[62px] px-10">
       <style type="text/css" media="print">
         {
           "\
@@ -20,7 +20,7 @@ const Migration = React.forwardRef(({ data }, ref) => {
         }
       </style>
       <h1 className="text-[16px] font-bold text-end px-[70px]">7168</h1>
-      <div className="pt-[210px] px-8">
+      <div className="pt-[215px] px-8">
         <div className="text-sm font-semibold">
           This is certify that
           <span className="text-base font-bold uppercase px-[5px]">{name}</span>
@@ -50,7 +50,7 @@ const Migration = React.forwardRef(({ data }, ref) => {
           </h1>
         </div>
       </div>
-      <h1 className="text-[17px] font-bold pt-[57px] px-[136px]">
+      <h1 className="text-[17px] font-bold pt-[57px] px-[135px]">
         {dateFormat(issueDate(), "dd mmm yyyy")}
       </h1>
     </div>
