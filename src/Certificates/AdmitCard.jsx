@@ -27,7 +27,7 @@ const AdmitCard = React.forwardRef(({ data }, ref) => {
         }
       </style>
       <h1 className="text-[16px] font-extrabold text-end">7168</h1>
-      <div className="pt-16">
+      <div className="pt-8">
         <div className="flex flex-row justify-end px-2">
           <img src={imgSrc} alt="Student" className="w-[95px] h-[110px]" />
         </div>
