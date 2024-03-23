@@ -56,7 +56,7 @@ const Registration = React.forwardRef(({ data }, ref) => {
           </div>
         </div>
       </div>
-      <h1 className="text-[17px] font-bold pt-[72px] px-[140px]">
+      <h1 className="text-[17px] font-bold pt-[70px] px-[140px]">
         {dateFormat(issueDate(), "dd mmm yyyy")}
       </h1>
     </div>
