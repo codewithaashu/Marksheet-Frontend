@@ -16,6 +16,7 @@ const AdmitCard = React.forwardRef(({ data }, ref) => {
     option4,
     option5,
     gender,
+    sLNoArr,
   } = data;
   return (
     <div ref={ref} className="w-full h-full pt-[36px] px-[180px]">
@@ -26,7 +27,9 @@ const AdmitCard = React.forwardRef(({ data }, ref) => {
 "
         }
       </style>
-      <h1 className="text-[16px] font-bold text-end">7168</h1>
+      <h1 className="text-[16px] font-bold text-end">
+        {sLNoArr?.admitCard ?? "7168"}
+      </h1>
       <div className="pt-8">
         <div className="flex flex-row justify-end px-2">
           <img src={imgSrc} alt="Student" className="w-[95px] h-[110px]" />

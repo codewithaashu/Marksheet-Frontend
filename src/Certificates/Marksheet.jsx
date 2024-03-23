@@ -20,6 +20,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
     option3,
     option4,
     option5,
+    sLNoArr,
     result: {
       lang1TheoryMarks,
       lang2TheoryMarks,
@@ -92,7 +93,9 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
 "
         }
       </style>
-      <div className="text-[16px] font-extrabold text-end">7168</div>
+      <div className="text-[16px] font-extrabold text-end">
+        {sLNoArr?.marksheet ?? "7168"}
+      </div>
       <div className="pt-28">
         <div className="flex flex-row justify-end px-1">
           <img src={imgSrc} alt="Student" className="w-[95px] h-[110px]" />

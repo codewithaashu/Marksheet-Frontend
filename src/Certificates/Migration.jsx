@@ -1,7 +1,7 @@
 import React from "react";
 import dateFormat from "dateformat";
 const Migration = React.forwardRef(({ data }, ref) => {
-  const { name, fatherName, regNo, rollNo, year } = data;
+  const { name, fatherName, regNo, rollNo, year, sLNoArr } = data;
   const issueDate = () => {
     const date = new Date(`${year}-06-15`);
     const day = date.getDay();
@@ -19,7 +19,9 @@ const Migration = React.forwardRef(({ data }, ref) => {
 "
         }
       </style>
-      <h1 className="text-[16px] font-bold text-end px-[70px]">7168</h1>
+      <h1 className="text-[16px] font-bold text-end px-[70px]">
+        {sLNoArr?.migration ?? "7168"}
+      </h1>
       <div className="pt-[209px] px-8">
         <div className="text-sm font-semibold">
           This is certify that

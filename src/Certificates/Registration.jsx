@@ -13,6 +13,7 @@ const Registration = React.forwardRef(({ data }, ref) => {
     option4,
     option5,
     year,
+    sLNoArr,
   } = data;
   const issueDate = () => {
     const date = new Date(`${year}-06-15`);
@@ -31,7 +32,10 @@ const Registration = React.forwardRef(({ data }, ref) => {
       "
         }
       </style>
-      ;<h1 className="text-[16px] font-bold text-end px-[70px]">7168</h1>
+      ;
+      <h1 className="text-[16px] font-bold text-end px-[70px]">
+        {sLNoArr?.registration ?? "7168"}
+      </h1>
       <div className="pt-[203.5px] px-[35px]">
         <div className="text-sm font-semibold">
           Certify that
