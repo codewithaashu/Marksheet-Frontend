@@ -71,14 +71,20 @@ const AdminModalContainer = ({ formData, setFormData, setData }) => {
               setFormData={setFormData}
               placeholder={"Enter Email Here..."}
             />
-            <InputComponent
-              label={"Change Password"}
-              inputType={"password"}
-              field={"password"}
-              formData={formData}
-              setFormData={setFormData}
-              placeholder={"Enter Password Here..."}
-            />
+            <div className="flex flex-col gap-1">
+              <h1 className="text-[15px] font-medium text-gray-600">
+                Change Password
+              </h1>
+              <input
+                type="password"
+                value={formData.password}
+                className={`file-input w-full h-fit p-2 bg-white text-sm border-[1px] border-gray-800 text-gray-700 focus:outline-none placeholder:text-sm py-3`}
+                placeholder="Enter Password Here..."
+                onChange={(e) =>
+                  setFormData({ ...formData, password: e.target.value })
+                }
+              />
+            </div>
           </div>
         </div>
         <div className="modal-action">
