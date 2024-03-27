@@ -4,6 +4,8 @@ import {
   useMaterialReactTable,
 } from "material-react-table";
 import { Box, IconButton, Tooltip } from "@mui/material";
+import ToggleOnIcon from "@mui/icons-material/ToggleOn";
+import ToggleOffIcon from "@mui/icons-material/ToggleOff";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ViewIcon from "@mui/icons-material/RemoveRedEye";
@@ -47,6 +49,23 @@ const TableContainer = ({ data, cols, field, setData }) => {
     setFormData(row);
   };
 
+  const handleToggleBtn = async (row) => {
+    try {
+      const { data } = await axios.put(
+        `${process.env.REACT_APP_SERVER_BASE_URL}/api/student/${row._id}`,
+        {
+          ...row,
+          modeOfResult: row.modeOfResult === "Online" ? "Offline" : "Online",
+        }
+      );
+      setData(data.data);
+      SuccessToast(data.message);
+      //window.location.reload();
+      return data;
+    } catch (err) {
+      ErrorToast("Server Error. Try Again");
+    }
+  };
   const handleAfterPrintDocument = (id) => {
     confirmAlert({
       customUI: ({ onClose }) => {
@@ -239,6 +258,25 @@ const TableContainer = ({ data, cols, field, setData }) => {
         </Tooltip>
         {field === "student" && (
           <>
+            {row.original?.modeOfResult === "Online" ? (
+              <Tooltip title="Online">
+                <IconButton
+                  onClick={() => handleToggleBtn(row.original)}
+                  color="success"
+                >
+                  <ToggleOnIcon fontSize="large" />
+                </IconButton>
+              </Tooltip>
+            ) : (
+              <Tooltip title="Offline">
+                <IconButton
+                  onClick={() => handleToggleBtn(row.original)}
+                  color="default"
+                >
+                  <ToggleOffIcon fontSize="large" />
+                </IconButton>
+              </Tooltip>
+            )}
             <Tooltip title="View Marksheet">
               <IconButton
                 onClick={() => handleViewBtn(row.original, "Marksheet")}
