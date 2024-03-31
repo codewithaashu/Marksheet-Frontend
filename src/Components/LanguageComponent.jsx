@@ -50,7 +50,7 @@ const LanguageComponent = ({ formData, setFormData, isMarks }) => {
             />
             <InputComponent
               label="Oral Marks"
-              inputType="text"
+              inputType="number"
               placeholder="Enter Oral Marks"
               field={"lang1OralMarks"}
               formData={formData}
@@ -101,7 +101,7 @@ const LanguageComponent = ({ formData, setFormData, isMarks }) => {
             />
             <InputComponent
               label="Oral Marks"
-              inputType="text"
+              inputType="number"
               placeholder="Enter Oral Marks"
               field={"lang2OralMarks"}
               formData={formData}

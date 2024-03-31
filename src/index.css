@@ -5,6 +5,15 @@
 .backgroundLogo {
   background: url("../public/background.png") no-repeat center;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
 @media print {
   @page {
     size: 210mm 297mm;

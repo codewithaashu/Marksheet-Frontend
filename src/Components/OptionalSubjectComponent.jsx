@@ -68,7 +68,7 @@ const OptionalSubjectComponent = ({
         />
         <InputComponent
           label="Oral Marks"
-          inputType="text"
+          inputType="number"
           placeholder="Enter Oral Marks"
           field={"opt1OralMarks"}
           formData={formData}
@@ -115,7 +115,7 @@ const OptionalSubjectComponent = ({
         />
         <InputComponent
           label="Oral Marks"
-          inputType="text"
+          inputType="number"
           placeholder="Enter Oral Marks"
           field={"opt2OralMarks"}
           formData={formData}
@@ -163,7 +163,7 @@ const OptionalSubjectComponent = ({
         />
         <InputComponent
           label="Oral Marks"
-          inputType="text"
+          inputType="number"
           placeholder="Enter Oral Marks"
           field={"opt3OralMarks"}
           formData={formData}
@@ -210,7 +210,7 @@ const OptionalSubjectComponent = ({
         />
         <InputComponent
           label="Oral Marks"
-          inputType="text"
+          inputType="number"
           placeholder="Enter Oral Marks"
           field={"opt4OralMarks"}
           formData={formData}
@@ -258,7 +258,7 @@ const OptionalSubjectComponent = ({
           />
           <InputComponent
             label="Oral Marks"
-            inputType="text"
+            inputType="number"
             placeholder="Enter Oral Marks"
             field={"opt5OralMarks"}
             formData={formData}

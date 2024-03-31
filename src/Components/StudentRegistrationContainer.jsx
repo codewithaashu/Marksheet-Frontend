@@ -51,7 +51,6 @@ const StudentRegistrationContainer = () => {
         { ...formData, adminUsername: localStorage.getItem("username") }
       );
       setLoading(false);
-      window.location.reload();
       return data;
     } catch (err) {
       ErrorToast("Server error. Try again later.");
@@ -88,6 +87,7 @@ const StudentRegistrationContainer = () => {
         option4: "",
         option5: "",
       });
+      window.location.reload();
       // fileInputRef?.current.value = "";
       // yearInputRef.current.value = "";
       // courseInputRef.current.value = "";
