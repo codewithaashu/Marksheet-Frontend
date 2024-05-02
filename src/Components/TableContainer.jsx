@@ -176,7 +176,11 @@ const TableContainer = ({ data, cols, field, setData }) => {
       return registrationRef.current;
     },
     onAfterPrint: () => {
-      handleAfterPrintDocument(printData._id);
+      if (printData.printingStatus === "Incomplete") {
+        handleAfterPrintDocument(printData._id);
+      } else {
+        window.location.reload();
+      }
     },
   });
 
