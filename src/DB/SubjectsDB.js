@@ -70,6 +70,8 @@ const commerceSubjects = [
   { value: "COMPUTER SCIENCE", label: "COMPUTER SCIENCE" },
   { value: "STATISTICS", label: "STATISTICS" },
   { value: "MATHEMATICS", label: "MATHEMATICS" },
+  { value: "COMMERCE", label: "COMMERCE" },
+  { value: "HISTORY", label: "HISTORY" },
 ];
 
 const artsSubjects = [

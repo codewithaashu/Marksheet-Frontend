@@ -59,7 +59,10 @@ const Login = () => {
   return (
     <div className="flex flex-row justify-center items-center h-screen">
       {!loading ? (
-        <div className="bg-white w-11/12 md:w-1/4 px-7 py-10 rounded-md shadow-md flex flex-col gap-4">
+        <form
+          className="bg-white w-11/12 md:w-1/4 px-7 py-10 rounded-md shadow-md flex flex-col gap-4"
+          onSubmit={(e) => handleLogin(e)}
+        >
           <h1 className="text-2xl font-semibold text-black text-center mb-3">
             Login
           </h1>
@@ -97,11 +100,11 @@ const Login = () => {
           </div>
           <button
             className="bg-blue py-2 text-white text-lg font-bold mt-5"
-            onClick={handleLogin}
+            onClick={(e) => handleLogin(e)}
           >
             Login
           </button>
-        </div>
+        </form>
       ) : (
         <div className="self-center py-10">
           <span className="loading loading-spinner loading-lg bg-blue"></span>
