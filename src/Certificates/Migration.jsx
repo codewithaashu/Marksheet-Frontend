@@ -3,7 +3,16 @@ import dateFormat from "dateformat";
 const Migration = React.forwardRef(({ data }, ref) => {
   const { name, fatherName, regNo, rollNo, year, sLNoArr } = data;
   const issueDate = () => {
-    const date = new Date(`${year}-06-15`);
+    let date;
+    if (year >= 2024) {
+      date = new Date(`${year}-05-15`);
+      const day = date.getDay();
+      if (day === 0) {
+        return `${year}-05-16`;
+      }
+      return `${year}-05-15`;
+    }
+    date = new Date(`${year}-06-16`);
     const day = date.getDay();
     if (day === 0) {
       return `${year}-06-16`;

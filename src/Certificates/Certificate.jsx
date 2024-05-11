@@ -18,7 +18,16 @@ const Certificate = React.forwardRef(({ data }, ref) => {
     sLNoArr,
   } = data;
   const issueDate = () => {
-    const date = new Date(`${year}-06-15`);
+    let date;
+    if (year >= 2024) {
+      date = new Date(`${year}-05-15`);
+      const day = date.getDay();
+      if (day === 0) {
+        return `${year}-05-16`;
+      }
+      return `${year}-05-15`;
+    }
+    date = new Date(`${year}-06-16`);
     const day = date.getDay();
     if (day === 0) {
       return `${year}-06-16`;
@@ -71,7 +80,9 @@ const Certificate = React.forwardRef(({ data }, ref) => {
           </div>
           <div className="text-[15px] font-semibold">
             passed the Secondary School Examination of the Board held in
-            <span className="text-[15px] font-bold px-3">Jun {year}</span>
+            <span className="text-[15px] font-bold px-3">
+              {year >= 2024 ? `May ${year}` : `June ${year} `}
+            </span>
           </div>
           <div className="text-[15px] font-semibold">
             from

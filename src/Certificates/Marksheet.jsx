@@ -77,7 +77,16 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
     }, 0);
   };
   const issueDate = () => {
-    const date = new Date(`${year}-06-15`);
+    let date;
+    if (year >= 2024) {
+      date = new Date(`${year}-05-15`);
+      const day = date.getDay();
+      if (day === 0) {
+        return `${year}-05-16`;
+      }
+      return `${year}-05-15`;
+    }
+    date = new Date(`${year}-06-16`);
     const day = date.getDay();
     if (day === 0) {
       return `${year}-06-16`;
@@ -106,7 +115,7 @@ const Marksheet = React.forwardRef(({ data }, ref) => {
               {course}
             </div>
             <div className="text-base font-semibold font-[roboto-medium]">
-              June {year}
+              {year >= 2024 ? `May ${year}` : `June ${year} `}
             </div>
           </div>
           <div className="pt-10 w-full flex flex-col">

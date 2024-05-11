@@ -16,7 +16,16 @@ const Registration = React.forwardRef(({ data }, ref) => {
     sLNoArr,
   } = data;
   const issueDate = () => {
-    const date = new Date(`${year}-06-15`);
+    let date;
+    if (year >= 2024) {
+      date = new Date(`${year}-03-15`);
+      const day = date.getDay();
+      if (day === 0) {
+        return `${year}-03-16`;
+      }
+      return `${year}-03-15`;
+    }
+    date = new Date(`${year}-04-16`);
     const day = date.getDay();
     if (day === 0) {
       return `${year}-04-16`;
