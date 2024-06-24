@@ -66,7 +66,7 @@ const commerceSubjects = [
   { value: "ACCOUNTANCY", label: "ACCOUNTANCY" },
   { value: "BUSINESS ORGANISATION", label: "BUSINESS ORGANISATION" },
   { value: "ECONOMICS", label: "ECONOMICS" },
-  { value: "BUSINESS MATH", label: "BUSINESS MATH" },
+  { value: "BUSINESS MATHEMATICS", label: "BUSINESS MATHEMATICS" },
   { value: "COMPUTER SCIENCE", label: "COMPUTER SCIENCE" },
   { value: "STATISTICS", label: "STATISTICS" },
   { value: "MATHEMATICS", label: "MATHEMATICS" },
